@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>LEVEL UP</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,116 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
+    <header>
+      <h2>Level Up: Personal Video Game Library</h2>
+    </header>
+
     <body>
-      <h1>Browser Template</h1>
+
+      <!-- Sign Up/In Modal-->
+      <button type="button" class="btn btn-primary" data-toggle="modal"
+        data-target="#authorizationModal"><span>Sign Up/In</span></button>
+
+        <div class="modal fade" id="authorizationModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="authorizationModalLabel"><span>Sign Up/In</span></h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <!--token-auth training-->
+                <p id="up-message"></p>
+
+                <form id="sign-up" >
+                  <fieldset>
+                      <input type="text" name="credentials[email]" placeholder="Email">
+                      <input type="password" name="credentials[password]"
+                       placeholder="Password">
+                      <input type="password" name="credentials[password_confirmation]"
+                       placeholder="Confirm Password">
+                      <input type="submit" value="Sign Up!">
+                  </fieldset>
+                </form>
+
+                <form id="sign-in" >
+                  <fieldset>
+                      <input type="text" name="credentials[email]" placeholder="Email">
+                      <input type="password" name="credentials[password]"
+                       placeholder="Password">
+                      <input type="submit" value="Sign In">
+                  </fieldset>
+                </form>
+                <!--token-auth training-->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="close-modal" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Sign Up/In Modal-->
+
+      <!-- Sign Out/PW Modal-->
+      <button type="button" class="btn btn-primary" data-toggle="modal"
+        data-target="#optionsModal"><span>Options</span></button>
+
+        <div class="modal fade" id="optionsModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="optionsModalLabel"><span>Options</span></h5>
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <!--token-auth training-->
+                <p id="out-message"></p>
+
+                <form id="change-password" >
+                  <fieldset>
+                      <input type="password" name="passwords[old]" placeholder="Old Password">
+                      <input type="password" name="passwords[new]"
+                       placeholder="New Password">
+                      <input type="submit" value="Change password">
+                  </fieldset>
+                </form>
+
+                <form id="sign-out" >
+                  <fieldset>
+                      <input type="submit" value="Sign Out">
+                  </fieldset>
+                </form>
+
+                <!--token-auth training-->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="close-modal" class="btn btn-primary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Sign Out/PW Modal-->
+
+      <!--VideoGame Log-->
+      <form>
+        <fieldset>
+          <input type='text' name="name" placeholder="Name">
+          <input type='text' name="developer" placeholder="Developer">
+          <input type='date' name="year" placeholder="Date">
+          <input type='text' name="copy" placeholder="Physical or Digital">
+          <input type='text' name="system" placeholder="System">
+          <div>
+            <p>Multiplayer</p>
+            <input type="radio" id="true" value="true">
+            <label for="true">True</label>
+            <input type="radio" id="false" value="false">
+            <label for="false">False</label>
+          </div>
+        </fieldset>
+      </form>
+      <!--VideoGame Log-->
+
+
     </body>
 </html>
