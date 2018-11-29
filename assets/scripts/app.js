@@ -8,6 +8,8 @@
 
 const authEvents = require('./auth/events.js')
 
+const libraryEvents = require('./library/events.js')
+
 $(() => {
 /* -----------------Auth Events----------------- */
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -15,4 +17,7 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   /* -----------------Auth Events----------------- */
+  /* -----------------Library Events----------------- */
+  $('#game-name').on('submit', libraryEvents.onGameName)
+  /* -----------------Library Events----------------- */
 })
