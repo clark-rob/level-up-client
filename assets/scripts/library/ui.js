@@ -1,36 +1,64 @@
 'use strict'
 const store = require('../store.js')
 
-const createDataSuccess = data => {
-  store.games = data.games
+const createVideoGameSuccess = data => {
+  store.game = data.game
   $('#create-message').show().text('New Game Created')
   $('#create-message').removeClass()
   $('#create-message').addClass('success')
   $('#create-message').fadeOut(5000)
 }
 
-const createDataFailure = () => {
+const createVideoGameFailure = () => {
   $('#create-message').show().text('Error Creating Game')
   $('#create-message').removeClass()
   $('#create-message').addClass('failure')
 }
 
-const showAllDataSuccess = data => {
-  $('#show-message').text(data.games)
-  console.log('games ' + data.games.id)
-  $('#show-message').removeClass()
-  $('#show-message').addClass('success')
+const showAllVideoGamesSuccess = data => {
+  $('#show-message').html('') // clears message
+  data.games.forEach(game => {
+    const videoGameHtml = (`
+      <h4> ${game.id}. ${game.name} </h4>
+      <p> ${game.system} </p>
+      <p> ${game.copy} </p>
+      <p> Multiplayer = ${game.multiplayer} </p>
+    `)
+    $('#show-message').append(videoGameHtml)
+  })
+  console.log('games ' + data)
 }
 
-const showAllDataFailure = () => {
+const showAllVideoGamesFailure = () => {
+  $('#show-message').show().text('Error Showing Games')
+  $('#show-message').removeClass()
+  $('#show-message').addClass('failure')
+}
+
+const showOneVideoGameSuccess = data => {
+  $('#show-message').html('') // clears message
+  const game = data.game
+  const videoGameHtml = (`
+    <h4> ${game.id}. ${game.name} </h4>
+    <p> ${game.system} </p>
+    <p> ${game.copy} </p>
+    <p> Multiplayer = ${game.multiplayer} </p>
+  `)
+  $('#show-message').append(videoGameHtml)
+  console.log('games ' + data)
+}
+
+const showOneVideoGameFailure = data => {
   $('#show-message').show().text('Error Showing Games')
   $('#show-message').removeClass()
   $('#show-message').addClass('failure')
 }
 
 module.exports = {
-  createDataSuccess,
-  createDataFailure,
-  showAllDataSuccess,
-  showAllDataFailure
+  createVideoGameSuccess,
+  createVideoGameFailure,
+  showAllVideoGamesSuccess,
+  showAllVideoGamesFailure,
+  showOneVideoGameSuccess,
+  showOneVideoGameFailure
 }

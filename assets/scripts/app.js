@@ -18,8 +18,9 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   /* -----------------Auth Events----------------- */
   /* -----------------Library Events----------------- */
-  $('.create-data').on('submit', libraryEvents.onCreateData)
-  $('.show-data').on('submit', libraryEvents.onShowAllData)
-  $('.update-data').on('submit', libraryEvents.onUpdateData)
+  $('.create-video-game').on('submit', libraryEvents.onCreateVideoGame)
+  $('.show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
+  $('.show-one-video-game').on('submit', libraryEvents.onShowOneVideoGame)
+  $('.update-video-game').on('submit', libraryEvents.onUpdateVideoGame)
   /* -----------------Library Events----------------- */
 })

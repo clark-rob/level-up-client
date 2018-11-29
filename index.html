@@ -103,7 +103,7 @@
       <!--Sign Out/PW Modal-->
 
       <!--Create VideoGame Data-->
-      <form class="create-data">
+      <form class="create-video-game">
         <fieldset>
           <input type='text' name="game[name]" placeholder="Name">
           <input type='text' name="game[developer]" placeholder="Developer">
@@ -124,15 +124,25 @@
       <p id="create-message"></p>
       <!--Create VideoGame Data-->
       <br>
+
       <!--Show VideoGame Data-->
-      <form class="show-data">
-        <input type="submit" value="Show Games">
-        <p id="show-message"></p>
-      </form>
+      <button class="show-all-video-games" class="btn btn-default">Show Games</button>
       <!--Show VideoGame Data-->
       <br>
+
+      <!--Show One VideoGame Data-->
+      <form class="show-one-video-game">
+        <fieldset>
+          <input type ='text' name='game[id]' placeholder="ID">
+          <!-- <input type='text' name="game[name]" placeholder="Name"> -->
+          <input type="submit" value="Get One Game">
+        </fieldset>
+      </form>
+      <!--Show One VideoGame Data-->
+      <br>
+
       <!--Update VideoGame Data-->
-      <form class="update-data">
+      <form class="update-video-game">
         <fieldset>
           <input type="number" name="game[id]" placeholder="ID">
           <input type='text' name="game[name]" placeholder="Name">
@@ -154,6 +164,6 @@
       <p id="update-message"></p>
       <!--Update VideoGame Data-->
 
-
+      <p id="show-message"></p>
     </body>
 </html>
