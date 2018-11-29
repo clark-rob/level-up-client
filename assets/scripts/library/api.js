@@ -35,8 +35,10 @@ const showOneVideoGame = (id) => {
 }
 
 const updateVideoGame = data => {
+  const id = data.game.id
+  delete data.game.id
   return $.ajax({
-    url: config.apiUrl + '/games/' + store.game.id,
+    url: config.apiUrl + '/games/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -45,9 +47,21 @@ const updateVideoGame = data => {
   })
 }
 
+const deleteOneVideoGame = data => {
+  const id = data.game.id
+  return $.ajax({
+    url: config.apiUrl + '/games/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createVideoGame,
   showAllVideoGames,
   showOneVideoGame,
-  updateVideoGame
+  updateVideoGame,
+  deleteOneVideoGame
 }

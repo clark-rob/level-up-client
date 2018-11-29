@@ -25,7 +25,6 @@ const onShowAllVideoGames = event => {
 const onShowOneVideoGame = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('game id = ' + data.game.id)
   api.showOneVideoGame(data.game.id)
     .then(ui.showOneVideoGameSuccess)
     .catch(ui.showOneVideoGameFailure)
@@ -39,9 +38,18 @@ const onUpdateVideoGame = event => {
     .catch(ui.updateVideoGameFailure)
 }
 
+const onDeleteOneVideoGame = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.deleteOneVideoGame(data)
+    .then(ui.deleteOneVideoGameSuccess)
+    .catch(ui.deleteOneVideoGameFailure)
+}
+
 module.exports = {
   onCreateVideoGame,
   onShowAllVideoGames,
   onShowOneVideoGame,
-  onUpdateVideoGame
+  onUpdateVideoGame,
+  onDeleteOneVideoGame
 }

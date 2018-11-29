@@ -45,13 +45,24 @@ const showOneVideoGameSuccess = data => {
     <p> Multiplayer = ${game.multiplayer} </p>
   `)
   $('#show-message').append(videoGameHtml)
-  console.log('games ' + data)
 }
 
-const showOneVideoGameFailure = data => {
+const showOneVideoGameFailure = () => {
   $('#show-message').show().text('Error Showing Games')
   $('#show-message').removeClass()
   $('#show-message').addClass('failure')
+}
+
+const updateVideoGameSuccess = data => {
+  $('#update-message').show().text('Updated Game')
+}
+
+const updateVideoGameFailure = () => {
+  $('#update-message').show().text('Error Updating Games')
+}
+
+const deleteOneVideoGameSuccess = data => {
+  $('#delete-message').show().text('Deleted Game')
 }
 
 module.exports = {
@@ -60,5 +71,8 @@ module.exports = {
   showAllVideoGamesSuccess,
   showAllVideoGamesFailure,
   showOneVideoGameSuccess,
-  showOneVideoGameFailure
+  showOneVideoGameFailure,
+  updateVideoGameSuccess,
+  updateVideoGameFailure,
+  deleteOneVideoGameSuccess
 }
