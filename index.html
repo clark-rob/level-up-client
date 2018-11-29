@@ -102,15 +102,15 @@
         </div>
       <!--Sign Out/PW Modal-->
 
-      <!--VideoGame Data-->
-      <form class="game-data">
+      <!--Create VideoGame Data-->
+      <form class="create-data">
         <fieldset>
           <input type='text' name="game[name]" placeholder="Name">
           <input type='text' name="game[developer]" placeholder="Developer">
           <input type='date' name="game[year]" placeholder="Date">
           <input type='text' name="game[copy]" placeholder="Physical or Digital">
           <input type='text' name="game[system]" placeholder="System">
-          <input type='text' name="game[multi]" placeholder="True or False">
+          <input type='text' name="game[multiplayer]" placeholder="True or False">
           <!-- <div name="game[multi]">
             <p>Multiplayer</p>
             <input type="radio" id="true" value="true">
@@ -121,7 +121,38 @@
           <input type="submit" value="Submit">
         </fieldset>
       </form>
-      <!--VideoGame Data-->
+      <p id="create-message"></p>
+      <!--Create VideoGame Data-->
+      <br>
+      <!--Show VideoGame Data-->
+      <form class="show-data">
+        <input type="submit" value="Show Games">
+        <p id="show-message"></p>
+      </form>
+      <!--Show VideoGame Data-->
+      <br>
+      <!--Update VideoGame Data-->
+      <form class="update-data">
+        <fieldset>
+          <input type="number" name="game[id]" placeholder="ID">
+          <input type='text' name="game[name]" placeholder="Name">
+          <input type='text' name="game[developer]" placeholder="Developer">
+          <input type='date' name="game[year]" placeholder="Date">
+          <input type='text' name="game[copy]" placeholder="Physical or Digital">
+          <input type='text' name="game[system]" placeholder="System">
+          <input type='text' name="game[multiplayer]" placeholder="True or False">
+          <!-- <div name="game[multi]">
+            <p>Multiplayer</p>
+            <input type="radio" id="true" value="true">
+            <label for="true">True</label>
+            <input type="radio" id="false" value="false">
+            <label for="false">False</label>
+          </div> -->
+          <input type="submit" value="Update">
+        </fieldset>
+      </form>
+      <p id="update-message"></p>
+      <!--Update VideoGame Data-->
 
 
     </body>

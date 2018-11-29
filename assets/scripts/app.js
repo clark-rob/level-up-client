@@ -18,6 +18,8 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   /* -----------------Auth Events----------------- */
   /* -----------------Library Events----------------- */
-  $('.game-data').on('submit', libraryEvents.onCreateData)
+  $('.create-data').on('submit', libraryEvents.onCreateData)
+  $('.show-data').on('submit', libraryEvents.onShowAllData)
+  $('.update-data').on('submit', libraryEvents.onUpdateData)
   /* -----------------Library Events----------------- */
 })
