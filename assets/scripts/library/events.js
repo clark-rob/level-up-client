@@ -28,6 +28,7 @@ const onShowOneVideoGame = event => {
   api.showOneVideoGame(data.game.id)
     .then(ui.showOneVideoGameSuccess)
     .catch(ui.showOneVideoGameFailure)
+  $(event.target).trigger('reset')
 }
 
 const onUpdateVideoGame = event => {
@@ -36,6 +37,7 @@ const onUpdateVideoGame = event => {
   api.updateVideoGame(data)
     .then(ui.updateVideoGameSuccess)
     .catch(ui.updateVideoGameFailure)
+  $(event.target).trigger('reset')
 }
 
 const onDeleteOneVideoGame = event => {

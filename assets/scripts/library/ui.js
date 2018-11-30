@@ -44,6 +44,7 @@ const showOneVideoGameSuccess = data => {
     <p> ${game.copy} </p>
     <p> Multiplayer = ${game.multiplayer} </p>
   `)
+  console.log(`${game.id}`)
   $('#show-message').append(videoGameHtml)
 }
 
