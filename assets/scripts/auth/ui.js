@@ -20,10 +20,8 @@ const signInSuccess = data => {
   $('#up-message').show().text('What to play, what to play...')
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
-  $('#sign-out').show() // sign out form appear
-  $('#change-password').show() // password form appear
-  $('#sign-up').hide() // sign up is hidden
-  $('#sign-in').hide() // sign in is hidden
+  $('#options-button').css('visibility', 'visible') // show options button
+  $('#sign-up-button').hide() // sign up is hidden
   $('#up-message').fadeOut(5000)
 }
 
@@ -54,12 +52,9 @@ const signOutSuccess = data => {
   $('#username').text('') // removes text for username
   $('#out-message').removeClass()
   $('#out-message').addClass('success')
-  $('.current-player').hide()
-  $('#sign-out').hide() // sign out hidden
-  $('#change-password').hide() // password hidden
-  $('#sign-up').show() // sign up appears
-  $('#sign-in').show() // sign in appears
-  // $('.create-game').hide() // hide create game button
+  // $('.current-player').hide()
+  $('#options-button').css('visibility', 'hidden') // sets option buton back to hidden
+  $('#sign-up-button').show() // sign up appears
   $('#out-message').fadeOut(5000)
 }
 

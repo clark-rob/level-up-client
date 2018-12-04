@@ -19,7 +19,7 @@
     <body>
 
       <!-- Sign Up/In Modal-->
-      <button type="button" class="btn btn-primary" data-toggle="modal"
+      <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
         data-target="#authorizationModal"><span>Sign Up/In</span></button>
 
         <div class="modal fade" id="authorizationModal">
@@ -63,7 +63,7 @@
       <!--Sign Up/In Modal-->
 
       <!-- Sign Out/PW Modal-->
-      <button type="button" class="btn btn-primary" data-toggle="modal"
+      <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
         data-target="#optionsModal"><span>Options</span></button>
 
         <div class="modal fade" id="optionsModal">
@@ -110,7 +110,7 @@
           <input type='date' name="game[year]" placeholder="Date">
           <input type='text' name="game[copy]" placeholder="Physical or Digital">
           <input type='text' name="game[system]" placeholder="System">
-          <input type='text' name="game[multiplayer]" placeholder="True or False">
+          Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False">
           <!-- <div name="game[multi]">
             <p>Multiplayer</p>
             <input type="radio" id="true" value="true">
@@ -149,7 +149,7 @@
           <input type='date' name="game[year]" placeholder="Date">
           <input type='text' name="game[copy]" placeholder="Physical or Digital">
           <input type='text' name="game[system]" placeholder="System">
-          <input type='text' name="game[multiplayer]" placeholder="True or False">
+          Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False">
           <!-- <div name="game[multi]">
             <p>Multiplayer</p>
             <input type="radio" id="true" value="true">
