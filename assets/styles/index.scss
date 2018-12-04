@@ -1,5 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
+.create-video-game {
+  visibility: hidden;
+}
+
+.show-all-video-games {
+  visibility: hidden;
+}
+
+.show-one-video-game {
+  visibility: hidden;
+}
+
+.update-video-game {
+  visibility: hidden;
+}
+
 #options-button {
   visibility: hidden;
 }

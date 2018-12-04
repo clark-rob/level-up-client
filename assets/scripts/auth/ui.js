@@ -22,6 +22,11 @@ const signInSuccess = data => {
   $('#options-button').css('visibility', 'visible') // show options button
   $('#sign-up-button').hide() // sign up is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
+  /* Video Game Logging show */
+  $('.create-video-game').css('visibility', 'visible')
+  $('.show-all-video-games').css('visibility', 'visible')
+  $('.show-one-video-game').css('visibility', 'visible')
+  $('.update-video-game').css('visibility', 'visible')
 }
 
 const signInFailure = () => { // removed error parameter
@@ -54,6 +59,12 @@ const signOutSuccess = data => {
   $('#options-button').css('visibility', 'hidden') // sets option buton back to hidden
   $('#sign-up-button').show() // sign up appears
   $('#optionsModal').modal('hide') // closes modal after success
+  /* Video Game Logging show */
+  $('.create-video-game').css('visibility', 'hidden')
+  $('.show-all-video-games').css('visibility', 'hidden')
+  $('.show-one-video-game').css('visibility', 'hidden')
+  $('.update-video-game').css('visibility', 'hidden')
+  $('#show-message').empty()
 }
 
 const signOutFailure = () => { // removed error parameter
