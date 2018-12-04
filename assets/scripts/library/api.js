@@ -47,10 +47,9 @@ const updateVideoGame = data => {
   })
 }
 
-const deleteOneVideoGame = data => {
-  const id = data.game.id
+const deleteOneVideoGame = (videoGameId) => {
   return $.ajax({
-    url: config.apiUrl + '/games/' + id,
+    url: config.apiUrl + '/games/' + videoGameId,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

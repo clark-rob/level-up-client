@@ -22,6 +22,6 @@ $(() => {
   $('.show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
   $('.show-one-video-game').on('submit', libraryEvents.onShowOneVideoGame)
   $('.update-video-game').on('submit', libraryEvents.onUpdateVideoGame)
-  $('.delete-one-video-game').on('submit', libraryEvents.onDeleteOneVideoGame)
+  $('#show-message').on('click', 'button', libraryEvents.onDeleteOneVideoGame)
   /* -----------------Library Events----------------- */
 })

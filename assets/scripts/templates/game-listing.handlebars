@@ -1,0 +1,35 @@
+{{#each games as |game|}}
+  {{log game}}
+
+
+<!-- each div is givin an h1 with data-id of the game.id -->
+  <div>
+    <h1 data-id="{{game.id}}"> <small>{{limit game.name 10}}</small></h1>
+    <section data-id="{{game.id}}">
+      <p>
+        {{#if game.developer}}
+          {{game.developer}}
+        {{else}}
+          No developer provided.
+        {{/if}}
+        <br>
+        {{#if game.system}}
+          {{game.system}}
+        {{else}}
+          No system provided.
+        {{/if}}
+        <br>
+        {{#if game.multiplayer}}
+          Multiplayer: {{game.multiplayer}}
+        {{else}}
+          No multiplayer provided.
+        {{/if}}
+      </p>
+      <button type="submit" class="btn btn-default">Remove game!</button>
+    </section>
+  </div>
+
+{{/each}}
+
+
+<!-- limit game.title 10 is a helper method that is called on from the helpers/limit.js even though it does not need a require-->

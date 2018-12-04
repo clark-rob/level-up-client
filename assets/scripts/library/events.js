@@ -42,9 +42,9 @@ const onUpdateVideoGame = event => {
 
 const onDeleteOneVideoGame = event => {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.deleteOneVideoGame(data)
-    .then(ui.deleteOneVideoGameSuccess)
+  const videoGameId = $(event.target).closest('section').data('id')
+  api.deleteOneVideoGame(videoGameId)
+    .then(() => onShowAllVideoGames(event))
     .catch(ui.deleteOneVideoGameFailure)
 }
 

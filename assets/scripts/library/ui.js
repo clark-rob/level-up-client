@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store.js')
+const showGamesTemplate = require('../templates/game-listing.handlebars')
 
 const createVideoGameSuccess = data => {
   store.game = data.game
@@ -16,17 +17,9 @@ const createVideoGameFailure = () => {
 }
 
 const showAllVideoGamesSuccess = data => {
-  $('#show-message').html('') // clears message
-  data.games.forEach(game => {
-    const videoGameHtml = (`
-      <h4> ${game.id}. ${game.name} </h4>
-      <p> ${game.system} </p>
-      <p> ${game.copy} </p>
-      <p> Multiplayer = ${game.multiplayer} </p>
-    `)
-    $('#show-message').append(videoGameHtml)
-  })
   console.log('games ' + data)
+  const showGamesHtml = showGamesTemplate({ games: data.games })
+  $('#show-message').html(showGamesHtml)
 }
 
 const showAllVideoGamesFailure = () => {
@@ -62,10 +55,6 @@ const updateVideoGameFailure = () => {
   $('#update-message').show().text('Error Updating Games')
 }
 
-const deleteOneVideoGameSuccess = data => {
-  $('#delete-message').show().text('Deleted Game')
-}
-
 module.exports = {
   createVideoGameSuccess,
   createVideoGameFailure,
@@ -74,6 +63,5 @@ module.exports = {
   showOneVideoGameSuccess,
   showOneVideoGameFailure,
   updateVideoGameSuccess,
-  updateVideoGameFailure,
-  deleteOneVideoGameSuccess
+  updateVideoGameFailure
 }
