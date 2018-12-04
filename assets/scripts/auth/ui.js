@@ -17,12 +17,11 @@ const signUpFailure = () => { // removed error parameter
 
 const signInSuccess = data => {
   store.user = data.user
-  $('#up-message').show().text('What to play, what to play...')
   $('#up-message').removeClass()
   $('#up-message').addClass('success')
   $('#options-button').css('visibility', 'visible') // show options button
   $('#sign-up-button').hide() // sign up is hidden
-  $('#up-message').fadeOut(5000)
+  $('#authorizationModal').modal('hide') // closes modal after success
 }
 
 const signInFailure = () => { // removed error parameter
@@ -48,14 +47,13 @@ const changePasswordFailure = () => { // removed error parameter
 
 const signOutSuccess = data => {
   store.user = null
-  $('#out-message').show().text('Have fun out there!')
   $('#username').text('') // removes text for username
   $('#out-message').removeClass()
   $('#out-message').addClass('success')
   // $('.current-player').hide()
   $('#options-button').css('visibility', 'hidden') // sets option buton back to hidden
   $('#sign-up-button').show() // sign up appears
-  $('#out-message').fadeOut(5000)
+  $('#optionsModal').modal('hide') // closes modal after success
 }
 
 const signOutFailure = () => { // removed error parameter
