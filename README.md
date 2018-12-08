@@ -20,8 +20,13 @@ bookcase or stored in an old shoe box.
 
 No more do you have to wonder what games you own. Level Up is here to help you level up your gaming organization. YEA!
 
-## Repository URL
+## Repo URL's
+- Front-end: https://github.com/clark-rob/level-up-client
+- Back-end: https://github.com/clark-rob/level-up-game-library
 
+## Deployed Site URL's
+- Front-end: https://clark-rob.github.io/level-up-client/
+- Back-end: https://cryptic-journey-46149.herokuapp.com/
 
 ## Idea Behind the Game (Planning)
 I am a video game addict. I most likely have too many systems and
@@ -65,12 +70,10 @@ from the crowd.
 ## Future Fixes
 - MAKE WORK DRY!!!!!
 - Work on CSS, improve UX
-- prevent other users from altering another users data
-- search a game by specific paramater
+- update searching feature by adding other paramaters
+  - by system, etc.
 - generate a random game
-- hide and show specifics when signed in/out
 - when updating a game, only update needed param
-- add url in README
 
 ## Bonus Accomplishments
 - link to thrid party API
