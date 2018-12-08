@@ -7,11 +7,9 @@ const ui = require('./ui.js')
 const onCreateVideoGame = event => { // function onCreateData uses the event submit to
   event.preventDefault() // prevent page reload
   const data = getFormFields(event.target) // target form is inserted into Data
-  console.log(data)
   api.createVideoGame(data) // takes data and sends it to api.js
     .then(ui.createVideoGameSuccess)
     .catch(ui.createVideoGameFailure)
-  // console.log(api.createData(data))
   $(event.target).trigger('reset') // once button clicked, .trigger resets input
 }
 
@@ -26,6 +24,15 @@ const onShowOneVideoGame = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.showOneVideoGame(data.game.id)
+    .then(ui.showOneVideoGameSuccess)
+    .catch(ui.showOneVideoGameFailure)
+  $(event.target).trigger('reset')
+}
+
+const onSearchOneVideoGame = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.searchOneVideoGame(data.game.name)
     .then(ui.showOneVideoGameSuccess)
     .catch(ui.showOneVideoGameFailure)
   $(event.target).trigger('reset')
@@ -52,6 +59,7 @@ module.exports = {
   onCreateVideoGame,
   onShowAllVideoGames,
   onShowOneVideoGame,
+  onSearchOneVideoGame,
   onUpdateVideoGame,
   onDeleteOneVideoGame
 }

@@ -34,6 +34,16 @@ const showOneVideoGame = (id) => {
   })
 }
 
+const searchOneVideoGame = (data) => {
+  return $.ajax({
+    url: config.apiUrl + '/game-search/' + data,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const updateVideoGame = data => {
   const id = data.game.id
   delete data.game.id
@@ -61,6 +71,7 @@ module.exports = {
   createVideoGame,
   showAllVideoGames,
   showOneVideoGame,
+  searchOneVideoGame,
   updateVideoGame,
   deleteOneVideoGame
 }

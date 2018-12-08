@@ -17,13 +17,12 @@ const createVideoGameFailure = () => {
 }
 
 const showAllVideoGamesSuccess = data => {
-  console.log('games ' + data)
   const showGamesHtml = showGamesTemplate({ games: data.games })
   $('#show-message').html(showGamesHtml)
 }
 
 const showAllVideoGamesFailure = () => {
-  $('#show-message').show().text('Error Showing Games')
+  $('#show-message').show().text('These are not the games you are looking for...')
   $('#show-message').removeClass()
   $('#show-message').addClass('failure')
 }
@@ -32,17 +31,16 @@ const showOneVideoGameSuccess = data => {
   $('#show-message').html('') // clears message
   const game = data.game
   const videoGameHtml = (`
-    <h4> ${game.id}. ${game.name} </h4>
+    <h4> ${game.name} </h4>
     <p> ${game.system} </p>
     <p> ${game.copy} </p>
     <p> Multiplayer = ${game.multiplayer} </p>
   `)
-  console.log(`${game.id}`)
   $('#show-message').append(videoGameHtml)
 }
 
 const showOneVideoGameFailure = () => {
-  $('#show-message').show().text('Error Showing Games')
+  $('#show-message').show().text("We can't seem to find the game. Was everything correct?")
   $('#show-message').removeClass()
   $('#show-message').addClass('failure')
 }
@@ -52,7 +50,7 @@ const updateVideoGameSuccess = data => {
 }
 
 const updateVideoGameFailure = () => {
-  $('#update-message').show().text('Error Updating Games')
+  $('#update-message').show().text('Do you have the authority to change that?')
 }
 
 module.exports = {
