@@ -1,18 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
 
-.create-video-game {
+body {
+  background-color: #499bff;
+}
+
+header {
+  background-color: #155087;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  width: auto;
+}
+
+#create-button {
   visibility: hidden;
 }
 
-.show-all-video-games {
+#search-button {
   visibility: hidden;
 }
 
-.show-one-video-game {
+#show-all-video-games {
   visibility: hidden;
 }
 
-.update-video-game {
+#update-button {
   visibility: hidden;
 }
 

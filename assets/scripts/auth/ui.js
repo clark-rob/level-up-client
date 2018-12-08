@@ -13,6 +13,7 @@ const signUpFailure = () => { // removed error parameter
   $('#up-message').removeClass()
   $('#up-message').addClass('failure')
   // removed console.error
+  $('#up-message').fadeOut(9000)
 }
 
 const signInSuccess = data => {
@@ -23,10 +24,10 @@ const signInSuccess = data => {
   $('#sign-up-button').hide() // sign up is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
-  $('.create-video-game').css('visibility', 'visible')
-  $('.show-all-video-games').css('visibility', 'visible')
-  $('.show-one-video-game').css('visibility', 'visible')
-  $('.update-video-game').css('visibility', 'visible')
+  $('#create-button').css('visibility', 'visible')
+  $('#search-button').css('visibility', 'visible')
+  $('#show-all-video-games').css('visibility', 'visible')
+  $('#update-button').css('visibility', 'visible')
 }
 
 const signInFailure = () => { // removed error parameter
@@ -34,6 +35,7 @@ const signInFailure = () => { // removed error parameter
   $('#up-message').removeClass()
   $('#up-message').addClass('failure')
   // removed console.error
+  $('#up-message').fadeOut(9000)
 }
 
 const changePasswordSuccess = data => {
@@ -48,6 +50,7 @@ const changePasswordFailure = () => { // removed error parameter
   $('#out-message').removeClass()
   $('#out-message').addClass('failure')
   // removed console.error
+  $('#out-message').fadeOut(9000)
 }
 
 const signOutSuccess = data => {
@@ -60,10 +63,10 @@ const signOutSuccess = data => {
   $('#sign-up-button').show() // sign up appears
   $('#optionsModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
-  $('.create-video-game').css('visibility', 'hidden')
-  $('.show-all-video-games').css('visibility', 'hidden')
-  $('.show-one-video-game').css('visibility', 'hidden')
-  $('.update-video-game').css('visibility', 'hidden')
+  $('#create-button').css('visibility', 'hidden')
+  $('#search-button').css('visibility', 'hidden')
+  $('#show-all-video-games').css('visibility', 'hidden')
+  $('#update-button').css('visibility', 'hidden')
   $('#show-message').empty()
 }
 
@@ -72,6 +75,7 @@ const signOutFailure = () => { // removed error parameter
   $('#out-message').removeClass()
   $('#out-message').addClass('failure')
   // removed console.error
+  $('#out-message').fadeOut(9000)
 }
 
 module.exports = {

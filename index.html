@@ -17,153 +17,206 @@
     </header>
 
     <body>
+      <div class="btn-toolbar justify-content-between" role="toolbar">
+        <div class="btn-group" role="group" aria-label="auth-group">
+        <!-- Sign Up/In Modal-->
+          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#authorizationModal"><span>Sign Up/In</span></button>
 
-      <!-- Sign Up/In Modal-->
-      <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
-        data-target="#authorizationModal"><span>Sign Up/In</span></button>
+            <div class="modal fade" id="authorizationModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="authorizationModalLabel"><span>Sign Up/In</span></h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="up-message"></p>
 
-        <div class="modal fade" id="authorizationModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="authorizationModalLabel"><span>Sign Up/In</span></h5>
-                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <!--token-auth training-->
-                <p id="up-message"></p>
-
-                <form id="sign-up" >
-                  <fieldset>
-                      <input type="text" name="credentials[email]" placeholder="Email">
+                    <form id="sign-up" >
+                      <input type="text" name="credentials[email]" placeholder="Email"><br/>
                       <input type="password" name="credentials[password]"
-                       placeholder="Password">
+                       placeholder="Password"><br/>
                       <input type="password" name="credentials[password_confirmation]"
-                       placeholder="Confirm Password">
+                       placeholder="Confirm Password"><br/>
                       <input type="submit" value="Sign Up!">
-                  </fieldset>
-                </form>
+                    </form>
 
-                <form id="sign-in" > <!--id of form is used-->
-                  <fieldset>
-                      <input type="text" name="credentials[email]" placeholder="Email">
+                    <form id="sign-in" > <!--id of form is used-->
+                      <input type="text" name="credentials[email]" placeholder="Email"><br/>
                       <input type="password" name="credentials[password]"
-                       placeholder="Password">
+                       placeholder="Password"><br/>
                       <input type="submit" value="Sign In">
-                  </fieldset>
-                </form>
-                <!--token-auth training-->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="close-modal" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </form>
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      <!--Sign Up/In Modal-->
+          <!--Sign Up/In Modal-->
 
-      <!-- Sign Out/PW Modal-->
-      <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
-        data-target="#optionsModal"><span>Options</span></button>
+          <!-- Sign Out/PW Modal-->
+          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#optionsModal"><span>Options</span></button>
 
-        <div class="modal fade" id="optionsModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="optionsModalLabel"><span>Options</span></h5>
-                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <!--token-auth training-->
-                <p id="out-message"></p>
+            <div class="modal fade" id="optionsModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="optionsModalLabel"><span>Options</span></h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="out-message"></p>
 
-                <form id="change-password" >
-                  <fieldset>
-                      <input type="password" name="passwords[old]" placeholder="Old Password">
+                    <form id="change-password" >
+                      <input type="password" name="passwords[old]" placeholder="Old Password"><br/>
                       <input type="password" name="passwords[new]"
-                       placeholder="New Password">
+                       placeholder="New Password"><br/>
                       <input type="submit" value="Change password">
-                  </fieldset>
-                </form>
+                    </form>
 
-                <form id="sign-out" >
-                  <fieldset>
-                      <input type="submit" value="Sign Out">
-                  </fieldset>
-                </form>
+                    <form id="sign-out" >
+                      <fieldset>
+                          <input type="submit" value="Sign Out">
+                      </fieldset>
+                    </form>
 
-                <!--token-auth training-->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="close-modal" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          <!--Sign Out/PW Modal-->
         </div>
-      <!--Sign Out/PW Modal-->
 
-      <!--Create VideoGame Data-->
-      <form class="create-video-game">
-        <fieldset>
-          <input type='text' name="game[name]" placeholder="Name">
-          <input type='text' name="game[developer]" placeholder="Developer">
-          <input type='date' name="game[year]" placeholder="Date">
-          <input type='text' name="game[copy]" placeholder="Physical or Digital">
-          <input type='text' name="game[system]" placeholder="System">
-          Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False">
-          <!-- <div name="game[multi]">
-            <p>Multiplayer</p>
-            <input type="radio" id="true" value="true">
-            <label for="true">True</label>
-            <input type="radio" id="false" value="false">
-            <label for="false">False</label>
-          </div> -->
-          <input type="submit" value="Submit">
-        </fieldset>
-      </form>
-      <p id="create-message"></p>
-      <!--Create VideoGame Data-->
-      <br>
+        <div class="btn-group" role="group" aria-label="video-game-group">
+          <!--Create VideoGame Modal-->
+          <button type="button" id="create-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#createVideoGameModal">Create Game</button>
 
-      <!--Show VideoGame Data-->
-      <button class="show-all-video-games" class="btn btn-default">Show Games</button>
-      <!--Show VideoGame Data-->
-      <br>
+            <div class="modal fade" id="createVideoGameModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="createVideoGameModalLabel">Create VideoGame</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--Create VideoGame Data-->
+                    <form class="create-video-game">
+                      <input type='text' name="game[name]" placeholder="Name"><br/>
+                      <input type='text' name="game[developer]" placeholder="Developer"><br/>
+                      <input type='date' name="game[year]" placeholder="Date"><br/>
+                      <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
+                      <input type='text' name="game[system]" placeholder="System"><br/>
+                      Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
+                      <!-- <div name="game[multi]">
+                        <p>Multiplayer</p>
+                        <input type="radio" id="true" value="true">
+                        <label for="true">True</label>
+                        <input type="radio" id="false" value="false">
+                        <label for="false">False</label>
+                      </div> -->
+                      <input type="submit" value="Submit">
+                    </form>
+                    <p id="create-message"></p>
+                    <!--Create VideoGame Data-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Create VideoGame Modal-->
 
-      <!--Show One VideoGame Data-->
-      <form class="show-one-video-game">
-        <fieldset>
-          <input type ='text' name='game[id]' placeholder="ID">
-          <input type="submit" value="Get One Game">
-        </fieldset>
-      </form>
-      <!--Show One VideoGame Data-->
-      <br>
+          <!--Show VideoGame Data-->
+          <input id="show-all-video-games" class="btn btn-primary" type="button" value='Show Games'>
+          <!--Show VideoGame Data-->
 
-      <!--Update VideoGame Data-->
-      <form class="update-video-game">
-        <fieldset>
-          <input type="text" name="game[id]" placeholder="ID">
-          <input type='text' name="game[name]" placeholder="Name">
-          <input type='text' name="game[developer]" placeholder="Developer">
-          <input type='date' name="game[year]" placeholder="Date">
-          <input type='text' name="game[copy]" placeholder="Physical or Digital">
-          <input type='text' name="game[system]" placeholder="System">
-          Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False">
-          <!-- <div name="game[multi]">
-            <p>Multiplayer</p>
-            <input type="radio" id="true" value="true">
-            <label for="true">True</label>
-            <input type="radio" id="false" value="false">
-            <label for="false">False</label>
-          </div> -->
-          <input type="submit" value="Update">
-        </fieldset>
-      </form>
-      <p id="update-message"></p>
-      <!--Update VideoGame Data-->
-      <br>
+          <!--Search One VideoGame Modal-->
+          <button type="button" id="search-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#searchVideoGameModal">Search Game</button>
 
+            <div class="modal fade" id="searchVideoGameModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="searchVideoGameModalLabel">Search for a VideoGame</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--Show One VideoGame Data-->
+                    <form class="show-one-video-game">
+                      <fieldset>
+                        <input type ='text' name='game[id]' placeholder="ID">
+                        <input type="submit" value="Search by ID">
+                      </fieldset>
+                    </form>
+                    <!--Show One VideoGame Data-->
+                    <br>
+
+                    <!--Search One VideoGame Data-->
+                    <form class="search-one-video-game">
+                      <fieldset>
+                        <input type ='text' name='game[name]' placeholder="Name">
+                        <input type="submit" value="Search by Name">
+                      </fieldset>
+                    </form>
+                    <!--Search One VideoGame Data-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Search One VideoGame Modal-->
+
+          <!--Update VideoGame Modal-->
+          <button type="button" id="update-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#updateVideoGameModal">Update Game</button>
+
+            <div class="modal fade" id="updateVideoGameModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="updateVideoGameModalLabel">Update a VideoGame</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--Update VideoGame Data-->
+                    <form class="update-video-game">
+                      <fieldset>
+                        <input type="text" name="game[id]" placeholder="ID"><br/>
+                        <input type='text' name="game[name]" placeholder="Name"><br/>
+                        <input type='text' name="game[developer]" placeholder="Developer"><br/>
+                        <input type='date' name="game[year]" placeholder="Date"><br/>
+                        <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
+                        <input type='text' name="game[system]" placeholder="System"><br/>
+                        Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
+                        <!-- <div name="game[multi]">
+                          <p>Multiplayer</p>
+                          <input type="radio" id="true" value="true">
+                          <label for="true">True</label>
+                          <input type="radio" id="false" value="false">
+                          <label for="false">False</label>
+                        </div> -->
+                        <input type="submit" value="Update">
+                      </fieldset>
+                    </form>
+                    <p id="update-message"></p>
+                    <!--Update VideoGame Data-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Update VideoGame Modal-->
+        </div>
+      </div>
       <p id="show-message"></p>
     </body>
 </html>
