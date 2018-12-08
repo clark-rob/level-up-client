@@ -8,26 +8,16 @@ header {
   background-color: #155087;
   color: #fff;
   height: 100px;
+  padding-top: 30px;
   text-align: center;
   width: auto;
 }
 
-#create-button {
+#create-button, #search-button, #show-all-video-games, #update-button, #options-button {
   visibility: hidden;
 }
 
-#search-button {
-  visibility: hidden;
-}
-
-#show-all-video-games {
-  visibility: hidden;
-}
-
-#update-button {
-  visibility: hidden;
-}
-
-#options-button {
-  visibility: hidden;
+#show-message {
+  padding-top: 25px;
+  text-align: center;
 }
