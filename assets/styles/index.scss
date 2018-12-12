@@ -1,16 +1,24 @@
 @import '~bootstrap/scss/bootstrap';
+@import 'colors';
 
 body {
-  background-color: #499bff;
+  background-color: $rgba-primary-0;
+  input {
+    border-radius: 7px;
+  }
 }
 
 header {
-  background-color: #155087;
-  color: #fff;
+  border-radius: 7px;
+  position: static;
+  background-color: $rgba-primary-1;
   height: 100px;
   padding-top: 30px;
   text-align: center;
   width: auto;
+  h1 {
+    color: $rgba-primary-4 * .9;
+  }
 }
 
 #create-button, #search-button, #show-all-video-games, #update-button, #options-button {
