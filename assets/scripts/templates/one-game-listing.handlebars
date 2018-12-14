@@ -1,4 +1,4 @@
-{{#each games as |game|}}
+{{#with game as |game|}}
 
 <!-- each div is givin an h1 with data-id of the game.id -->
   <div class="shown-game">
@@ -42,7 +42,7 @@
   </div>
   <br>
 
-{{/each}}
+{{/with}}
 
 
 <!-- limit game.title 10 is a helper method that is called on from the helpers/limit.js even though it does not need a require-->

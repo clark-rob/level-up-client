@@ -51,6 +51,7 @@ const onDeleteOneVideoGame = event => {
   event.preventDefault()
   const videoGameId = $(event.target).closest('section').data('id')
   api.deleteOneVideoGame(videoGameId)
+    .then(() => onShowOneVideoGame(event))
     .then(() => onShowAllVideoGames(event))
     .catch(ui.deleteOneVideoGameFailure)
 }

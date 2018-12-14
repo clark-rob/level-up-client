@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store.js')
 const showGamesTemplate = require('../templates/game-listing.handlebars')
+const showOneGameTemplate = require('../templates/one-game-listing.handlebars')
 
 const createVideoGameSuccess = data => {
   store.game = data.game
@@ -28,15 +29,8 @@ const showAllVideoGamesFailure = () => {
 }
 
 const showOneVideoGameSuccess = data => {
-  $('#show-message').html('') // clears message
-  const game = data.game
-  const videoGameHtml = (`
-    <h4> ${game.name} </h4>
-    <p> ${game.system} </p>
-    <p> ${game.copy} </p>
-    <p> Multiplayer = ${game.multiplayer} </p>
-  `)
-  $('#show-message').append(videoGameHtml)
+  const showGamesHtml = showOneGameTemplate({ game: data.game })
+  $('#show-message').html(showGamesHtml)
 }
 
 const showOneVideoGameFailure = () => {
