@@ -3,29 +3,52 @@
 
 body {
   background-color: $rgba-primary-0;
-  input {
-    border-radius: 7px;
-  }
+  color: $rgba-primary-2;
 }
 
 header {
-  border-radius: 7px;
-  position: static;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   background-color: $rgba-primary-1;
   height: 100px;
   padding-top: 30px;
   text-align: center;
+  word-wrap: normal;
   width: auto;
   h1 {
     color: $rgba-primary-4 * .9;
   }
 }
 
-#create-button, #search-button, #show-all-video-games, #update-button, #options-button {
-  visibility: hidden;
+.bottom-bar {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: $rgba-primary-1;
+  height: 100px;
+  padding-top: 30px;
+  position: fixed;
+  top: 100vh;
+  transform: translateY(-100%);
+  width: 100%;
 }
 
-#show-message {
-  padding-top: 25px;
+.btn-toolbar {
+  margin: 0 22px;
+  padding: 10px 0;
+}
+
+.shown-game {
+  background-color: $rgba-primary-3;
+  margin: 50px auto 80px auto;
+  padding: 20px;
   text-align: center;
+  width: 300px;
+}
+
+#create-button,
+#search-button,
+#show-all-video-games,
+#update-button,
+#options-button {
+  visibility: hidden;
 }

@@ -29,8 +29,8 @@ const showAllVideoGamesFailure = () => {
 }
 
 const showOneVideoGameSuccess = data => {
-  const showGamesHtml = showOneGameTemplate({ game: data.game })
-  $('#show-message').html(showGamesHtml)
+  const showOneGameHtml = showOneGameTemplate({ game: data.game })
+  $('#show-message').html(showOneGameHtml)
 }
 
 const showOneVideoGameFailure = () => {
