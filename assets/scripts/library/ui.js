@@ -19,24 +19,24 @@ const createVideoGameFailure = () => {
 
 const showAllVideoGamesSuccess = data => {
   const showGamesHtml = showGamesTemplate({ games: data.games })
-  $('#show-message').html(showGamesHtml)
+  $('.show-message').html(showGamesHtml)
 }
 
 const showAllVideoGamesFailure = () => {
-  $('#show-message').show().text('These are not the games you are looking for...')
-  $('#show-message').removeClass()
-  $('#show-message').addClass('failure')
+  $('.show-message').show().text('These are not the games you are looking for...')
+  $('.show-message').removeClass()
+  $('.show-message').addClass('failure')
 }
 
 const showOneVideoGameSuccess = data => {
   const showOneGameHtml = showOneGameTemplate({ game: data.game })
-  $('#show-message').html(showOneGameHtml)
+  $('.show-message').html(showOneGameHtml)
 }
 
 const showOneVideoGameFailure = () => {
-  $('#show-message').show().text("We can't seem to find the game. Was everything correct?")
-  $('#show-message').removeClass()
-  $('#show-message').addClass('failure')
+  $('.show-message').show().text("We can't seem to find the game. Was everything correct?")
+  $('.show-message').removeClass()
+  $('.show-message').addClass('failure')
 }
 
 const updateVideoGameSuccess = data => {

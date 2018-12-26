@@ -157,7 +157,7 @@
           <!--Create VideoGame Modal-->
 
           <!--Show VideoGame Data-->
-          <input id="show-all-video-games" class="btn btn-primary" type="button" value='Show Games'>
+          <input class="show-all-video-games btn btn-primary" type="button" value='Show Games'>
           <!--Show VideoGame Data-->
 
           <!--Search One VideoGame Modal-->
@@ -195,49 +195,9 @@
               </div>
             </div>
           <!--Search One VideoGame Modal-->
-
-          <!--Update VideoGame Modal-->
-          <button type="button" id="update-button" class="btn btn-danger" data-toggle="modal"
-            data-target="#updateVideoGameModal">Update Game</button>
-
-            <div class="modal fade" id="updateVideoGameModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="updateVideoGameModalLabel">Update a VideoGame</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--Update VideoGame Data-->
-                    <form class="update-video-game">
-                      <fieldset>
-                        <input type="text" name="game[id]" placeholder="ID"><br/>
-                        <input type='text' name="game[name]" placeholder="Name"><br/>
-                        <input type='text' name="game[developer]" placeholder="Developer"><br/>
-                        <input type='date' name="game[year]" placeholder="Date"><br/>
-                        <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
-                        <input type='text' name="game[system]" placeholder="System"><br/>
-                        Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
-                        <!-- <div name="game[multi]">
-                          <p>Multiplayer</p>
-                          <input type="radio" id="true" value="true">
-                          <label for="true">True</label>
-                          <input type="radio" id="false" value="false">
-                          <label for="false">False</label>
-                        </div> -->
-                        <input type="submit" value="Update">
-                      </fieldset>
-                    </form>
-                    <p id="update-message"></p>
-                    <!--Update VideoGame Data-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Update VideoGame Modal-->
         </div>
       </div>
-      <p id="show-message"></p>
+      <p class="show-message"></p>
     </body>
     <div class="bottom-bar"></div>
     <footer>

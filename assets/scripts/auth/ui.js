@@ -26,8 +26,7 @@ const signInSuccess = data => {
   /* Video Game Logging show */
   $('#create-button').css('visibility', 'visible')
   $('#search-button').css('visibility', 'visible')
-  $('#show-all-video-games').css('visibility', 'visible')
-  $('#update-button').css('visibility', 'visible')
+  $('.show-all-video-games').css('visibility', 'visible')
 }
 
 const signInFailure = () => { // removed error parameter
@@ -65,9 +64,8 @@ const signOutSuccess = data => {
   /* Video Game Logging show */
   $('#create-button').css('visibility', 'hidden')
   $('#search-button').css('visibility', 'hidden')
-  $('#show-all-video-games').css('visibility', 'hidden')
-  $('#update-button').css('visibility', 'hidden')
-  $('#show-message').empty()
+  $('.show-all-video-games').css('visibility', 'hidden')
+  $('.show-message').empty()
 }
 
 const signOutFailure = () => { // removed error parameter

@@ -19,10 +19,10 @@ $(() => {
   /* -----------------Auth Events----------------- */
   /* -----------------Library Events----------------- */
   $('.create-video-game').on('submit', libraryEvents.onCreateVideoGame)
-  $('#show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
+  $('.show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
   $('.show-one-video-game').on('submit', libraryEvents.onShowOneVideoGame)
   $('.search-one-video-game').on('submit', libraryEvents.onSearchOneVideoGame)
-  $('.update-video-game').on('submit', libraryEvents.onUpdateVideoGame)
-  $('#show-message').on('click', 'button', libraryEvents.onDeleteOneVideoGame)
+  $('.show-message').on('submit', libraryEvents.onUpdateVideoGame)
+  $('.show-message').on('click', '.delete-video-game-btn', libraryEvents.onDeleteOneVideoGame)
   /* -----------------Library Events----------------- */
 })

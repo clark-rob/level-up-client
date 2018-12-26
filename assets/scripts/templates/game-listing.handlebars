@@ -37,7 +37,52 @@
           Release date not provided.
         {{/if}}
       </p>
-      <button type="submit" class="btn btn-default">Remove game!</button>
+      <div class="game-actions footer text-right">
+        <button type="button" class="update-video-game-btn btn-warning" data-toggle="modal"
+          data-target="#updateModal{{game.id}}">Update</button>
+          <!--Update VideoGame Modal-->
+          <div class="modal fade" id="updateModal{{game.id}}">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="updateModalLabel">Update</h5>
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <!--Update VideoGame Data-->
+                  <form class="update-video-game">
+                      <!-- <div class="form-group">
+                        <input class="form-control" type="text" name="game[id]" placeholder="ID">
+                      </div> -->
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[name]" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[developer]" placeholder="Developer">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='date' name="game[year]" placeholder="Date">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[copy]" placeholder="Physical or Digital">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[system]" placeholder="System">
+                      </div>
+                      <div class="form-group">
+                        Multiplayer: <input class="form-control" type='text' name="game[multiplayer]" placeholder="True or False">
+                      </div>
+                      <button type="submit" class="btn-btn-warning">Update!</button>
+                  </form>
+                  <p id="update-message"></p>
+                  <!--Update VideoGame Data-->
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Update VideoGame Modal-->
+      <button type="submit" class="delete-video-game-btn btn-danger">Remove</button>
+    </div>
     </section>
   </div>
   <br>
