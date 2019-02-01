@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>LEVEL UP</title>
+      <title>Level-Up Library</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,49 +12,28 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
-    <header>
-      <h1>Level Up: Personal Video Game Library</h2>
-    </header>
-
     <body>
+      <div class="top-bar">
+        <h1>Level-Up</h1>
+      </div>
       <div class="btn-toolbar justify-content-between" role="toolbar">
 
-        <!-- Auth Grouping -->
+<!-- Auth Grouping -->
         <div class="btn-group" role="group" aria-label="auth-group">
-        <!-- Sign Up/In Modal-->
-          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
-            data-target="#authorizationModal">Sign Up/In</button>
+<!-- Log In Modal-->
+          <button type="button" class="log-in-btn btn-primary" data-toggle="modal"
+            data-target="#authorizationModal">Log In</button>
 
             <div class="modal fade" id="authorizationModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header text-center">
-                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
+                    <h5 class="modal-title" id="authorizationModalLabel">Log In</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <!--token-auth training-->
-                    <p id="up-message"></p>
 
-                    <form id="sign-up">
-                      <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="credentials[password]"
-                         placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="credentials[password_confirmation]"
-                         placeholder="Confirm Password">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Sign Up!</button>
-                    </form>
-                    <br><hr>
-
-                    <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
-                    <hr><br>
-                    <form id="sign-in" class="form-inline"> <!--id of form is used-->
+                    <form id="sign-in" class="form"> <!--id of form is used-->
                       <div class="form-group">
                         <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
                       </div>
@@ -119,7 +98,7 @@
         <!-- Auth Grouping -->
 
         <div class="btn-group" role="group" aria-label="video-game-group">
-          <!--Create VideoGame Modal-->
+        <!--Create VideoGame Modal------------->
           <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
             data-target="#createVideoGameModal">Create Game</button>
 
@@ -197,9 +176,44 @@
           <!--Search One VideoGame Modal-->
         </div>
       </div>
-      <p class="show-message"></p>
+<!-- Game Card -->
+      <p class="game-card"></p>
+<!-- Game Card -->
+
+<!-- Welcome Message -->
+      <div class="welcome-message">
+        <p>Welcome to Level-Up, your personal library of your pride and joy!</p>
+        <p>If you're new to the site, please, sign up below and then log in to start your logging!</p>
+<!-- Welcome Message -->
+        <br/>
+<!-- Sign Up Form -->
+        <p class="sign-up-message"></p>
+        <form id="sign-up">
+          <div class="form-group">
+            <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" name="credentials[password]"
+             placeholder="Password">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" name="credentials[password_confirmation]"
+             placeholder="Confirm Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up!</button>
+        </form>
+<!-- Sign Up Form -->
+      </div>
     </body>
-    <div class="bottom-bar"></div>
+    <div class="bottom-bar">
+    <!-- Color change -->
+      <!-- <div class="custom-color">
+        <input type="range" id="red" min="0" max="255" value="0">
+        <input type="range" id="green" min="0" max="255" value="0">
+        <input type="range" id="blue" min="0" max="255" value="0">
+      </div> -->
+    <!-- Color change -->
+    </div>
     <footer>
     </footer>
 </html>

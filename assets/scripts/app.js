@@ -22,7 +22,7 @@ $(() => {
   $('.show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
   $('.show-one-video-game').on('submit', libraryEvents.onShowOneVideoGame)
   $('.search-one-video-game').on('submit', libraryEvents.onSearchOneVideoGame)
-  $('.show-message').on('submit', libraryEvents.onUpdateVideoGame)
-  $('.show-message').on('click', '.delete-video-game-btn', libraryEvents.onDeleteOneVideoGame)
+  $('.game-card').on('submit', libraryEvents.onUpdateVideoGame)
+  $('.game-card').on('click', '.delete-video-game-btn', libraryEvents.onDeleteOneVideoGame)
   /* -----------------Library Events----------------- */
 })

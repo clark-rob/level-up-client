@@ -2,35 +2,36 @@
 @import 'colors';
 
 body {
-  background-color: $rgba-primary-0;
-  color: $rgba-primary-2;
+  // background-color: $rgba-primary-0;
+  color: $rgba-primary-0 * 0.4;
 }
 
-header {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  background-color: $rgba-primary-1;
-  height: 100px;
-  padding-top: 30px;
-  text-align: center;
-  word-wrap: normal;
-  width: auto;
-  h1 {
-    color: $rgba-primary-4 * .9;
-  }
-}
+// .top-bar {
+//   border-bottom-left-radius: 25px;
+//   border-bottom-right-radius: 25px;
+//   background-color: $rgba-primary-0 * 0.3;
+//   height: 100px;
+//   overflow: visible;
+//   padding-top: 30px;
+//   text-align: center;
+//   width: auto;
+//
+//   h1 {
+//     color: $rgba-primary-0 * 0.8;
+//   }
+// }
 
-.bottom-bar {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  background-color: $rgba-primary-1;
-  height: 100px;
-  padding-top: 30px;
-  position: fixed;
-  top: 100vh;
-  transform: translateY(-100%);
-  width: 100%;
-}
+// .bottom-bar {
+//   border-top-left-radius: 25px;
+//   border-top-right-radius: 25px;
+//   background-color: $rgba-primary-0 * 0.3;
+//   height: 100px;
+//   padding-top: 30px;
+//   position: fixed;
+//   top: 100vh;
+//   transform: translateY(-100%);
+//   width: 100%;
+// }
 
 .btn-toolbar {
   margin: 0 22px;
@@ -38,11 +39,16 @@ header {
 }
 
 .shown-game {
-  background-color: $rgba-primary-3;
+  background-color: $rgba-primary-0 * 0.9;
   margin: 50px auto 80px auto;
   padding: 20px;
   text-align: center;
   width: 300px;
+}
+
+.welcome-message {
+  margin: auto;
+  width: 500px;
 }
 
 #create-button,
