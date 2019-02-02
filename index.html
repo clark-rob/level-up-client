@@ -13,26 +13,66 @@
     </head>
 
     <body>
+
       <div class="top-bar">
         <h1>Level-Up</h1>
-      </div>
-      <div class="btn-toolbar justify-content-between" role="toolbar">
 
-<!-- Auth Grouping -->
-        <div class="btn-group" role="group" aria-label="auth-group">
-<!-- Log In Modal-->
-          <button type="button" class="log-in-btn btn-primary" data-toggle="modal"
-            data-target="#authorizationModal">Log In</button>
+<!-- Sign Up Button-->
+        <button type="button" class="sign-up-btn btn-primary" data-toggle="modal"
+          data-target="#signUpModal">Sign Up</button>
+<!-- Sign Up Modal-->
+          <div class="modal fade" id="signUpModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header text-center">
+                  <!-- Title -->
+                  <h5 class="sign-up-modal-title">Sign Up</h5>
+                  <!-- Close button -->
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
 
-            <div class="modal fade" id="authorizationModal">
+<!-- Sign up form -->
+<!-- Sign Up Form -->
+                  <p class="sign-up-message"></p>
+                  <form id="sign-up">
+                    <div class="form-group">
+                      <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="password" name="credentials[password]"
+                       placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="password" name="credentials[password_confirmation]"
+                       placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                  </form>
+<!-- Sign Up Form -->
+<!-- Sign up form -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!--Sign Up Modal-->
+
+<!-- Log In/Out Button-->
+          <button type="button" class="access-btn btn-primary" data-toggle="modal"
+            data-target="#accessModal">Log <span class="access-modal-change">In</span></button>
+<!-- Log In/Out Modal-->
+            <div class="modal fade" id="accessModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header text-center">
-                    <h5 class="modal-title" id="authorizationModalLabel">Log In</h5>
+                    <h5 class="access-modal-title">Log <span class="access-modal-change">In</span></h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-
+<!-- Log in form -->
                     <form id="sign-in" class="form"> <!--id of form is used-->
                       <div class="form-group">
                         <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
@@ -41,19 +81,25 @@
                         <input class="form-control" type="password" name="credentials[password]"
                        placeholder="Password">
                      </div>
-                      <button type="submit" class="btn btn-primary">Sign In</button>
+                      <button type="submit" class="btn btn-primary">Log In</button>
                     </form>
-                    <!--token-auth training-->
+<!-- Log in form -->
+<!-- Log out Form -->
+                    <p>Are you sure you want to leave?</p>
+                    <form id="sign-out" >
+                      <button type="submit" class="btn btn-danger">Log Out</button>
+                    </form>
+<!-- Log out Form -->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
-          <!--Sign Up/In Modal-->
-
-          <!-- Sign Out/PW Modal-->
+<!--Log In/Out Modal-->
+      </div>
+<!-- Sign Out/PW Modal-->
           <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
             data-target="#optionsModal">Options</button>
 
@@ -65,7 +111,7 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <!--token-auth training-->
+<!-- Password Form -->
                     <p id="out-message"></p>
 
                     <form id="change-password" class="form-inline">
@@ -79,13 +125,13 @@
                       </div>
                       <button type="submit" class="btn btn-primary">Change password</button>
                     </form>
+<!-- Password Form -->
                     <br>
-
+<!-- Log out Form -->
                     <form id="sign-out" >
                       <button type="submit" class="btn btn-danger">Sign Out</button>
                     </form>
-
-                    <!--token-auth training-->
+<!-- Log out Form -->
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
@@ -93,9 +139,9 @@
                 </div>
               </div>
             </div>
-          <!--Sign Out/PW Modal-->
+<!--Sign Out/PW Modal-->
         </div>
-        <!-- Auth Grouping -->
+<!-- Auth Grouping -->
 
         <div class="btn-group" role="group" aria-label="video-game-group">
         <!--Create VideoGame Modal------------->
@@ -176,6 +222,8 @@
           <!--Search One VideoGame Modal-->
         </div>
       </div>
+<!-- NavBar -->
+
 <!-- Game Card -->
       <p class="game-card"></p>
 <!-- Game Card -->
@@ -185,24 +233,6 @@
         <p>Welcome to Level-Up, your personal library of your pride and joy!</p>
         <p>If you're new to the site, please, sign up below and then log in to start your logging!</p>
 <!-- Welcome Message -->
-        <br/>
-<!-- Sign Up Form -->
-        <p class="sign-up-message"></p>
-        <form id="sign-up">
-          <div class="form-group">
-            <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="password" name="credentials[password]"
-             placeholder="Password">
-          </div>
-          <div class="form-group">
-            <input class="form-control" type="password" name="credentials[password_confirmation]"
-             placeholder="Confirm Password">
-          </div>
-          <button type="submit" class="btn btn-primary">Sign Up!</button>
-        </form>
-<!-- Sign Up Form -->
       </div>
     </body>
     <div class="bottom-bar">
