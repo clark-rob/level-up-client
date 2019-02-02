@@ -5,12 +5,12 @@ const showOneGameTemplate = require('../templates/one-game-listing.handlebars')
 
 const createVideoGameSuccess = data => {
   store.game = data.game
-  $('#create-message').show().text('New Game Created')
-  $('#create-message').fadeOut(5000)
+  $('.create-message').show().text('New Game Created')
+  $('.create-message').fadeOut(5000)
 }
 
 const createVideoGameFailure = () => {
-  $('#create-message').show().text('Error Creating Game')
+  $('.create-message').show().text('Error Creating Game')
 }
 
 const showAllVideoGamesSuccess = data => {

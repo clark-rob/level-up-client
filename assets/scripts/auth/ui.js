@@ -18,9 +18,9 @@ const signInSuccess = data => {
   $('.log-in-btn').hide() // log in is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
-  $('#create-button').css('visibility', 'visible')
+  $('.create-button').css('visibility', 'visible')
   $('#search-button').css('visibility', 'visible')
-  $('.show-all-video-games').css('visibility', 'visible')
+
 }
 
 const signInFailure = () => { // removed error parameter
@@ -48,7 +48,7 @@ const signOutSuccess = data => {
   $('.log-in-btn').show() // log in appears
   $('#optionsModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
-  $('#create-button').css('visibility', 'hidden')
+  $('.create-button').css('visibility', 'hidden')
   $('#search-button').css('visibility', 'hidden')
   $('.show-all-video-games').css('visibility', 'hidden')
   $('.game-card').empty()

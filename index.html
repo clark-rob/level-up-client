@@ -13,12 +13,12 @@
     </head>
 
     <body>
-
+<!-- Top Bar Container-->
       <div class="top-bar">
         <h1>Level-Up</h1>
 
 <!-- Sign Up Button-->
-        <button type="button" class="sign-up-btn btn-primary" data-toggle="modal"
+        <button class="sign-up-btn btn-primary" data-toggle="modal"
           data-target="#signUpModal">Sign Up</button>
 <!-- Sign Up Modal-->
           <div class="modal fade" id="signUpModal">
@@ -31,10 +31,8 @@
                   <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
-
-<!-- Sign up form -->
-<!-- Sign Up Form -->
                   <p class="sign-up-message"></p>
+<!-- Sign Up Form -->
                   <form id="sign-up">
                     <div class="form-group">
                       <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
@@ -50,7 +48,6 @@
                     <button type="submit" class="btn btn-primary">Sign Up</button>
                   </form>
 <!-- Sign Up Form -->
-<!-- Sign up form -->
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
@@ -60,35 +57,42 @@
           </div>
 <!--Sign Up Modal-->
 
-<!-- Log In/Out Button-->
-          <button type="button" class="access-btn btn-primary" data-toggle="modal"
+<!-- Access Button-->
+          <button class="access-btn btn-primary" data-toggle="modal"
             data-target="#accessModal">Log <span class="access-modal-change">In</span></button>
-<!-- Log In/Out Modal-->
+<!-- Access Modal-->
             <div class="modal fade" id="accessModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header text-center">
+                    <!-- Title -->
                     <h5 class="access-modal-title">Log <span class="access-modal-change">In</span></h5>
+                    <!-- Close Button -->
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
+                    <p class="access-error-message">Error Message</p>
 <!-- Log in form -->
-                    <form id="sign-in" class="form"> <!--id of form is used-->
-                      <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="credentials[password]"
-                       placeholder="Password">
-                     </div>
-                      <button type="submit" class="btn btn-primary">Log In</button>
-                    </form>
+                    <div class="log-in-screen">
+                      <form id="sign-in"> <!--id of form is used-->
+                        <div class="form-group">
+                          <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" name="credentials[password]"
+                         placeholder="Password">
+                       </div>
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                      </form>
+                    </div>
 <!-- Log in form -->
 <!-- Log out Form -->
-                    <p>Are you sure you want to leave?</p>
-                    <form id="sign-out" >
-                      <button type="submit" class="btn btn-danger">Log Out</button>
-                    </form>
+                    <div class="log-out-screen">
+                      <p>Are you sure you want to leave?</p>
+                      <form id="sign-out" >
+                        <button type="submit" class="btn btn-danger">Log Out</button>
+                      </form>
+                    </div>
 <!-- Log out Form -->
                   </div>
                   <div class="modal-footer">
@@ -97,23 +101,26 @@
                 </div>
               </div>
             </div>
-<!--Log In/Out Modal-->
+<!--Access Modal-->
       </div>
-<!-- Sign Out/PW Modal-->
-          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
-            data-target="#optionsModal">Options</button>
+<!-- Top Bar Container-->
 
-            <div class="modal fade" id="optionsModal">
+<!-- Nav Bar Container -->
+      <nav>
+<!-- Account Button-->
+          <button class="account-btn btn-primary" data-toggle="modal"
+            data-target="#accountModal">Account</button>
+<!-- Account Modal-->
+            <div class="modal fade" id="accountModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
+                    <h5 class="modal-title">Account</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
 <!-- Password Form -->
                     <p id="out-message"></p>
-
                     <form id="change-password" class="form-inline">
                       <div class="form-group">
                         <input class="form-control" type="password" name="passwords[old]"
@@ -126,103 +133,109 @@
                       <button type="submit" class="btn btn-primary">Change password</button>
                     </form>
 <!-- Password Form -->
-                    <br>
-<!-- Log out Form -->
-                    <form id="sign-out" >
-                      <button type="submit" class="btn btn-danger">Sign Out</button>
-                    </form>
-<!-- Log out Form -->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
-<!--Sign Out/PW Modal-->
+<!-- Account Modal-->
+
+<!--Search One VideoGame Button-->
+      <button class="btn btn-primary" data-toggle="modal"
+        data-target="#searchVideoGameModal">Search Game</button>
+<!--Search One VideoGame Modal-->
+        <div class="modal fade" id="searchVideoGameModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <!-- Title -->
+                <h5 class="modal-title">Search for a VideoGame</h5>
+                <!-- Close Button -->
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              </div>
+              <div class="modal-body">
+<!--Show One VideoGame Data-->
+                <form class="show-one-video-game">
+                  <fieldset>
+                    <input type ='text' name='game[id]' placeholder="ID">
+                    <input type="submit" value="Search by ID">
+                  </fieldset>
+                </form>
+<!--Show One VideoGame Data-->
+                <br>
+<!--Search One VideoGame Data-->
+                <form class="search-one-video-game">
+                  <fieldset>
+                    <input type ='text' name='game[name]' placeholder="Name">
+                    <input type="submit" value="Search by Name">
+                  </fieldset>
+                </form>
+<!--Search One VideoGame Data-->
+              </div>
+            </div>
+          </div>
         </div>
-<!-- Auth Grouping -->
+<!--Search One VideoGame Modal-->
+      </nav>
+<!-- Nav Bar Container -->
 
-        <div class="btn-group" role="group" aria-label="video-game-group">
-        <!--Create VideoGame Modal------------->
-          <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
-            data-target="#createVideoGameModal">Create Game</button>
-
-            <div class="modal fade" id="createVideoGameModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="createVideoGameModalLabel">Create VideoGame</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--Create VideoGame Data-->
-                    <form class="create-video-game">
-                      <input type='text' name="game[name]" placeholder="Name"><br/>
-                      <input type='text' name="game[developer]" placeholder="Developer"><br/>
-                      <input type='date' name="game[year]" placeholder="Date"><br/>
-                      <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
-                      <input type='text' name="game[system]" placeholder="System"><br/>
-                      Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
-                      <!-- <div name="game[multi]">
-                        <p>Multiplayer</p>
-                        <input type="radio" id="true" value="true">
-                        <label for="true">True</label>
-                        <input type="radio" id="false" value="false">
-                        <label for="false">False</label>
-                      </div> -->
-                      <input type="submit" value="Submit">
-                    </form>
-                    <p id="create-message"></p>
-                    <!--Create VideoGame Data-->
-                  </div>
-                </div>
-              </div>
+<!-- Create VideoGame Button ----->
+      <button class="create-btn btn-primary" data-toggle="modal"
+      data-target="#createVideoGameModal">Create Game +</button>
+<!-- Create VideoGame Modal ---->
+      <div class="modal fade" id="createVideoGameModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Title -->
+              <h5 class="modal-title">Create VideoGame</h5>
+              <!-- Close Button -->
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
-          <!--Create VideoGame Modal-->
-
-          <!--Show VideoGame Data-->
-          <input class="show-all-video-games btn btn-primary" type="button" value='Show Games'>
-          <!--Show VideoGame Data-->
-
-          <!--Search One VideoGame Modal-->
-          <button type="button" id="search-button" class="btn btn-warning" data-toggle="modal"
-            data-target="#searchVideoGameModal">Search Game</button>
-
-            <div class="modal fade" id="searchVideoGameModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="searchVideoGameModalLabel">Search for a VideoGame</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--Show One VideoGame Data-->
-                    <form class="show-one-video-game">
-                      <fieldset>
-                        <input type ='text' name='game[id]' placeholder="ID">
-                        <input type="submit" value="Search by ID">
-                      </fieldset>
-                    </form>
-                    <!--Show One VideoGame Data-->
-                    <br>
-
-                    <!--Search One VideoGame Data-->
-                    <form class="search-one-video-game">
-                      <fieldset>
-                        <input type ='text' name='game[name]' placeholder="Name">
-                        <input type="submit" value="Search by Name">
-                      </fieldset>
-                    </form>
-                    <!--Search One VideoGame Data-->
-                  </div>
+            <div class="modal-body">
+              <p class="create-message"></p>
+<!-- Create VideoGame Form -->
+              <form class="create-video-game">
+                <div class="form-group">
+                  <input type='text' name="game[name]" placeholder="Name">
                 </div>
-              </div>
+                <div class="form-group">
+                  <input type='text' name="game[system]" placeholder="System">
+                </div>
+                <div class="form-group">
+                  <input type='text' name="game[developer]" placeholder="Developer">
+                </div>
+                <div class="form-group">
+                  <input type='date' name="game[year]" placeholder="Date">
+                </div>
+                <div class="form-group">
+                  <label>Copy: </label>
+                  <input type='radio' id="physical" value="physical" name="game[copy]">
+                  <label for="physical">Physical</label>
+                  <input type='radio' id="digital" value="digital" name="game[copy]">
+                  <label for="digital">Digital</label>
+                </div>
+                <div class="form-group">
+                  <label>Multiplayer: </label>
+                  <input type="radio" id="true" value="true" name="game[multiplayer]">
+                  <label for="true">True</label>
+                  <input type="radio" id="false" value="false" name="game[multiplayer]">
+                  <label for="false">False</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+              </form>
+<!--Create VideoGame Form-->
             </div>
-          <!--Search One VideoGame Modal-->
+          </div>
         </div>
       </div>
-<!-- NavBar -->
+<!--Create VideoGame Modal-->
+
+<!--Show VideoGame Data-->
+      <input class="show-all-video-games btn btn-primary" type="button" value='Show Games'>
+<!--Show VideoGame Data-->
 
 <!-- Game Card -->
       <p class="game-card"></p>
@@ -232,18 +245,16 @@
       <div class="welcome-message">
         <p>Welcome to Level-Up, your personal library of your pride and joy!</p>
         <p>If you're new to the site, please, sign up below and then log in to start your logging!</p>
-<!-- Welcome Message -->
       </div>
+<!-- Welcome Message -->
+
+<!-- Bottom Bar -->
+      <div class="bottom-bar">
+        <div>BroccoliRob Creation</div>
+      </div>
+<!-- Bottom Bar -->
     </body>
-    <div class="bottom-bar">
-    <!-- Color change -->
-      <!-- <div class="custom-color">
-        <input type="range" id="red" min="0" max="255" value="0">
-        <input type="range" id="green" min="0" max="255" value="0">
-        <input type="range" id="blue" min="0" max="255" value="0">
-      </div> -->
-    <!-- Color change -->
-    </div>
+
     <footer>
     </footer>
 </html>
