@@ -41,6 +41,16 @@ body {
 .carousel {
   padding: 20px 100px;
   width: auto;
+
+  .carousel-caption {
+    background-color: $rgba-primary-0 * 0.9;
+  }
+
+  .carousel-indicators {
+    li {
+      background-color: #0f0;
+    }
+  }
 }
 
 .shown-game {
