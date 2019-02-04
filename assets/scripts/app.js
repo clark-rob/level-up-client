@@ -19,7 +19,7 @@ $(() => {
   /* -----------------Auth Events----------------- */
   /* -----------------Library Events----------------- */
   $('.create-video-game').on('submit', libraryEvents.onCreateVideoGame)
-  $('.show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
+  $('.show-all-btn').on('click', libraryEvents.onShowAllVideoGames)
   $('.show-one-video-game').on('submit', libraryEvents.onShowOneVideoGame)
   $('.search-one-video-game').on('submit', libraryEvents.onSearchOneVideoGame)
   $('.game-card').on('submit', libraryEvents.onUpdateVideoGame)

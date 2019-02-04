@@ -14,99 +14,106 @@
 
     <body>
 <!-- Top Bar Container-->
-      <div class="top-bar">
-        <h1>Level-Up</h1>
-
-<!-- Sign Up Button-->
-        <button class="sign-up-btn btn-primary" data-toggle="modal"
-          data-target="#signUpModal">Sign Up</button>
-<!-- Sign Up Modal-->
-          <div class="modal fade" id="signUpModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header text-center">
-                  <!-- Title -->
-                  <h5 class="sign-up-modal-title">Sign Up</h5>
-                  <!-- Close button -->
-                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                  <p class="sign-up-message"></p>
-<!-- Sign Up Form -->
-                  <form id="sign-up">
-                    <div class="form-group">
-                      <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <input class="form-control" type="password" name="credentials[password]"
-                       placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <input class="form-control" type="password" name="credentials[password_confirmation]"
-                       placeholder="Confirm Password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                  </form>
-<!-- Sign Up Form -->
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
+      <div class="container-fluid">
+        <div class="row top-bar">
+          <div class="col">
+            <h1>Level-Up</h1>
           </div>
-<!--Sign Up Modal-->
-
-<!-- Access Button-->
-          <button class="access-btn btn-primary" data-toggle="modal"
-            data-target="#accessModal">Log <span class="access-modal-change">In</span></button>
-<!-- Access Modal-->
-            <div class="modal fade" id="accessModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header text-center">
-                    <!-- Title -->
-                    <h5 class="access-modal-title">Log <span class="access-modal-change">In</span></h5>
-                    <!-- Close Button -->
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="access-error-message">Error Message</p>
-<!-- Log in form -->
-                    <div class="log-in-screen">
-                      <form id="sign-in"> <!--id of form is used-->
+          <div class="col-2">
+<!-- Sign Up Button-->
+            <button class="sign-up-btn btn-primary" data-toggle="modal"
+              data-target="#signUpModal">Sign Up</button>
+<!-- Sign Up Modal-->
+              <div class="modal fade" id="signUpModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header text-center">
+                      <!-- Title -->
+                      <h5 class="sign-up-modal-title">Sign Up</h5>
+                      <!-- Close button -->
+                      <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="sign-up-message"></p>
+<!-- Sign Up Form -->
+                      <form id="sign-up">
                         <div class="form-group">
                           <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
                         </div>
                         <div class="form-group">
                           <input class="form-control" type="password" name="credentials[password]"
-                         placeholder="Password">
-                       </div>
-                        <button type="submit" class="btn btn-primary">Log In</button>
+                           placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" name="credentials[password_confirmation]"
+                           placeholder="Confirm Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
                       </form>
+<!-- Sign Up Form -->
                     </div>
-<!-- Log in form -->
-<!-- Log out Form -->
-                    <div class="log-out-screen">
-                      <p>Are you sure you want to leave?</p>
-                      <form id="sign-out" >
-                        <button type="submit" class="btn btn-danger">Log Out</button>
-                      </form>
+                    <div class="modal-footer">
+                      <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
-<!-- Log out Form -->
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
+<!--Sign Up Modal-->
             </div>
+
+            <div class="col-2">
+<!-- Access Button-->
+              <button class="access-btn btn-primary" data-toggle="modal"
+                data-target="#accessModal">Log <span class="access-modal-change">In</span></button>
+<!-- Access Modal-->
+                <div class="modal fade" id="accessModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header text-center">
+                        <!-- Title -->
+                        <h5 class="access-modal-title">Log <span class="access-modal-change">In</span></h5>
+                        <!-- Close Button -->
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <p class="access-error-message">Error Message</p>
+<!-- Log in form -->
+                        <div class="log-in-screen">
+                          <form id="sign-in"> <!--id of form is used-->
+                            <div class="form-group">
+                              <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                              <input class="form-control" type="password" name="credentials[password]"
+                             placeholder="Password">
+                           </div>
+                            <button type="submit" class="btn btn-primary">Log In</button>
+                          </form>
+                        </div>
+<!-- Log in form -->
+<!-- Log out Form -->
+                        <div class="log-out-screen">
+                          <p>Are you sure you want to leave?</p>
+                          <form id="sign-out" >
+                            <button type="submit" class="btn btn-danger">Log Out</button>
+                          </form>
+                        </div>
+<!-- Log out Form -->
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 <!--Access Modal-->
+          </div>
+        </div>
       </div>
 <!-- Top Bar Container-->
 
 <!-- Nav Bar Container -->
-      <nav>
+      <nav class="navbar">
 <!-- Account Button-->
           <button class="account-btn btn-primary" data-toggle="modal"
             data-target="#accountModal">Account</button>
@@ -143,7 +150,7 @@
 <!-- Account Modal-->
 
 <!--Show VideoGame Data-->
-      <input class="show-all-video-games btn btn-primary" type="button" value='Show Games'>
+      <input class="show-all-btn btn-primary" type="button" value='Show Games'>
 <!--Show VideoGame Data-->
 
 <!--Search One VideoGame Button-->
@@ -185,62 +192,64 @@
       </nav>
 <!-- Nav Bar Container -->
 
-<!-- Game Card -->
-      <div class="game-list">
-<!-- Create VideoGame Button ----->
-        <button class="create-btn btn-primary" data-toggle="modal"
-        data-target="#createVideoGameModal">Create Game +</button>
-<!-- Create VideoGame Modal ---->
-        <div class="modal fade" id="createVideoGameModal">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <!-- Title -->
-                <h5 class="modal-title">Create VideoGame</h5>
-                <!-- Close Button -->
-                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <p class="create-message"></p>
-<!-- Create VideoGame Form -->
-                <form class="create-video-game">
-                  <div class="form-group">
-                    <input type='text' name="game[name]" placeholder="Name">
-                  </div>
-                  <div class="form-group">
-                    <input type='text' name="game[system]" placeholder="System">
-                  </div>
-                  <div class="form-group">
-                    <input type='text' name="game[developer]" placeholder="Developer">
-                  </div>
-                  <div class="form-group">
-                    <input type='date' name="game[year]" placeholder="Date">
-                  </div>
-                  <div class="form-group">
-                    <label>Copy: </label>
-                    <input type='radio' id="physical" value="physical" name="game[copy]">
-                    <label for="physical">Physical</label>
-                    <input type='radio' id="digital" value="digital" name="game[copy]">
-                    <label for="digital">Digital</label>
-                  </div>
-                  <div class="form-group">
-                    <label>Multiplayer: </label>
-                    <input type="radio" id="true" value="true" name="game[multiplayer]">
-                    <label for="true">True</label>
-                    <input type="radio" id="false" value="false" name="game[multiplayer]">
-                    <label for="false">False</label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Create</button>
-                </form>
-<!--Create VideoGame Form-->
+<!-- Game List -->
+      <div class="row game-list">
+  <!-- Create VideoGame Button ----->
+        <div class="col 4">
+          <button class="create-btn btn-primary" data-toggle="modal"
+          data-target="#createVideoGameModal">Create Game +</button>
+        </div>
+  <!-- Create VideoGame Modal ---->
+          <div class="modal fade" id="createVideoGameModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- Title -->
+                  <h5 class="modal-title">Create VideoGame</h5>
+                  <!-- Close Button -->
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <p class="create-message"></p>
+  <!-- Create VideoGame Form -->
+                  <form class="create-video-game">
+                    <div class="form-group">
+                      <input type='text' name="game[name]" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <input type='text' name="game[system]" placeholder="System">
+                    </div>
+                    <div class="form-group">
+                      <input type='text' name="game[developer]" placeholder="Developer">
+                    </div>
+                    <div class="form-group">
+                      <input type='date' name="game[year]" placeholder="Date">
+                    </div>
+                    <div class="form-group">
+                      <label>Copy: </label>
+                      <input type='radio' id="physical" value="physical" name="game[copy]">
+                      <label for="physical">Physical</label>
+                      <input type='radio' id="digital" value="digital" name="game[copy]">
+                      <label for="digital">Digital</label>
+                    </div>
+                    <div class="form-group">
+                      <label>Multiplayer: </label>
+                      <input type="radio" id="true" value="true" name="game[multiplayer]">
+                      <label for="true">True</label>
+                      <input type="radio" id="false" value="false" name="game[multiplayer]">
+                      <label for="false">False</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                  </form>
+  <!--Create VideoGame Form-->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<!--Create VideoGame Modal-->
-        <p class="game-card"></p>
+  <!--Create VideoGame Modal-->
+          <p class="game-card"></p>
       </div>
-<!-- Game Card -->
+<!-- Game List -->
 
 <!-- Load Page -->
 <!-- Welcome Carousel data-ride begins carousel spin-->
@@ -277,12 +286,17 @@
         </a>
       </div>
 <!-- Welcome Carousel -->
-      <div class="recent-releases">
-        <h4>Recent Releases</h4>
+
+<!-- Release Dates -->
+      <div class="row">
+        <div class="col recent-releases">
+          <h4>Recent Releases</h4>
+        </div>
+        <div class="col upcoming-releases">
+          <h4>Upcoming Releases</h4>
+        </div>
       </div>
-      <div class="upcoming-releases">
-        <h4>Upcoming Releases</h4>
-      </div>
+<!-- Release Dates -->
 <!-- Load Page -->
 
 <!-- Bottom Bar -->
