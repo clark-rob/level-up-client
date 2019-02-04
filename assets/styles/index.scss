@@ -33,10 +33,15 @@ body {
 //   width: 100%;
 // }
 
-// .btn-toolbar {
-//   margin: 0 22px;
-//   padding: 10px 0;
-// }
+.btn-toolbar {
+  margin: 0 22px;
+  padding: 10px 0;
+}
+
+.carousel {
+  padding: 20px 100px;
+  width: auto;
+}
 
 .shown-game {
   background-color: $rgba-primary-0 * 0.9;

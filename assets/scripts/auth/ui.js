@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store.js')
+const libraryEvents = require('../library/events.js')
 
 const signUpSuccess = data => {
   $('.sign-up-message').show().text('What Games Do You Have?!')
@@ -19,8 +20,8 @@ const signInSuccess = data => {
   $('#authorizationModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
   $('.create-button').css('visibility', 'visible')
-  $('#search-button').css('visibility', 'visible')
-
+  // $('#search-button').css('visibility', 'visible')
+  libraryEvents.onShowAllVideoGames() // calls showAllVideoGames api
 }
 
 const signInFailure = () => { // removed error parameter
