@@ -149,6 +149,58 @@
             </div>
 <!-- Account Modal-->
 
+<!-- Create VideoGame Button ----->
+      <button class="create-btn btn-primary" data-toggle="modal"
+      data-target="#createVideoGameModal">Create Game</button>
+<!-- Create VideoGame Modal ---->
+      <div class="modal fade" id="createVideoGameModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Title -->
+              <h5 class="modal-title">Create VideoGame</h5>
+              <!-- Close Button -->
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="create-message"></p>
+<!-- Create VideoGame Form -->
+              <form class="create-video-game">
+                <div class="form-group">
+                  <input type='text' name="game[name]" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <input type='text' name="game[system]" placeholder="System">
+                </div>
+                <div class="form-group">
+                  <input type='text' name="game[developer]" placeholder="Developer">
+                </div>
+                <div class="form-group">
+                  <input type='date' name="game[year]" placeholder="Date">
+                </div>
+                <div class="form-group">
+                  <label>Copy: </label>
+                  <input type='radio' id="physical" value="physical" name="game[copy]">
+                  <label for="physical">Physical</label>
+                  <input type='radio' id="digital" value="digital" name="game[copy]">
+                  <label for="digital">Digital</label>
+                </div>
+                <div class="form-group">
+                  <label>Multiplayer: </label>
+                  <input type="radio" id="true" value="true" name="game[multiplayer]">
+                  <label for="true">True</label>
+                  <input type="radio" id="false" value="false" name="game[multiplayer]">
+                  <label for="false">False</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Create</button>
+              </form>
+<!--Create VideoGame Form-->
+            </div>
+          </div>
+        </div>
+      </div>
+<!--Create VideoGame Modal-->
+
 <!--Show VideoGame Data-->
       <input class="show-all-btn btn-primary" type="button" value='Show Games'>
 <!--Show VideoGame Data-->
@@ -193,62 +245,7 @@
 <!-- Nav Bar Container -->
 
 <!-- Game List -->
-      <div class="row game-list">
-  <!-- Create VideoGame Button ----->
-        <div class="col 4">
-          <button class="create-btn btn-primary" data-toggle="modal"
-          data-target="#createVideoGameModal">Create Game +</button>
-        </div>
-  <!-- Create VideoGame Modal ---->
-          <div class="modal fade" id="createVideoGameModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <!-- Title -->
-                  <h5 class="modal-title">Create VideoGame</h5>
-                  <!-- Close Button -->
-                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                  <p class="create-message"></p>
-  <!-- Create VideoGame Form -->
-                  <form class="create-video-game">
-                    <div class="form-group">
-                      <input type='text' name="game[name]" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                      <input type='text' name="game[system]" placeholder="System">
-                    </div>
-                    <div class="form-group">
-                      <input type='text' name="game[developer]" placeholder="Developer">
-                    </div>
-                    <div class="form-group">
-                      <input type='date' name="game[year]" placeholder="Date">
-                    </div>
-                    <div class="form-group">
-                      <label>Copy: </label>
-                      <input type='radio' id="physical" value="physical" name="game[copy]">
-                      <label for="physical">Physical</label>
-                      <input type='radio' id="digital" value="digital" name="game[copy]">
-                      <label for="digital">Digital</label>
-                    </div>
-                    <div class="form-group">
-                      <label>Multiplayer: </label>
-                      <input type="radio" id="true" value="true" name="game[multiplayer]">
-                      <label for="true">True</label>
-                      <input type="radio" id="false" value="false" name="game[multiplayer]">
-                      <label for="false">False</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Create</button>
-                  </form>
-  <!--Create VideoGame Form-->
-                </div>
-              </div>
-            </div>
-          </div>
-  <!--Create VideoGame Modal-->
-          <p class="game-card"></p>
-      </div>
+      <div class="card-deck game-card"></div>
 <!-- Game List -->
 
 <!-- Load Page -->

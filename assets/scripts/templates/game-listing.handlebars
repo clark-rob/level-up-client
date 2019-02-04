@@ -2,90 +2,86 @@
 
 <!-- each div is givin an h1 with data-id of the game.id -->
   <div class="card shown-game">
-    <h1 data-id="{{game.id}}"><small>{{game.name}}</small></h1>
-    <section data-id="{{game.id}}">
-      <p>
-        ID: {{game.id}}
-        <br>
-        {{#if game.developer}}
-          {{game.developer}}
-        {{else}}
-          No developer provided.
-        {{/if}}
-        <br>
-        {{#if game.system}}
-          {{game.system}}
-        {{else}}
-          No system provided.
-        {{/if}}
-        <br>
-        {{#if game.copy}}
-          Copy: {{game.copy}}
-        {{else}}
-          Copy was not provided.
-        {{/if}}
-        <br>
-        {{#if game.multiplayer}}
-          Multiplayer: {{game.multiplayer}}
-        {{else}}
-          No multiplayer provided.
-        {{/if}}
-        <br>
-        {{#if game.year}}
-          Released: {{game.year}}
-        {{else}}
-          Release date not provided.
-        {{/if}}
-      </p>
-      <div class="game-actions footer text-right">
-        <button type="button" class="update-video-game-btn btn-warning" data-toggle="modal"
-          data-target="#updateModal{{game.id}}">Update</button>
-          <!--Update VideoGame Modal-->
-          <div class="modal fade" id="updateModal{{game.id}}">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="updateModalLabel">Update</h5>
-                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                </div>
-                <div class="modal-body">
-                  <!--Update VideoGame Data-->
-                  <form class="update-video-game">
-                      <!-- <div class="form-group">
-                        <input class="form-control" type="text" name="game[id]" placeholder="ID">
-                      </div> -->
+    <div class="card-body">
+      <h1 data-id="{{game.id}}"><small>{{game.name}}</small></h1>
+      <section data-id="{{game.id}}">
+        <p>
+          ID: {{game.id}}
+          <br>
+          {{#if game.system}}
+            {{game.system}}
+          {{else}}
+            No system provided.
+          {{/if}}
+          <br>
+          {{#if game.copy}}
+            Copy: {{game.copy}}
+          {{else}}
+            Copy was not provided.
+          {{/if}}
+          <br>
+          {{#if game.multiplayer}}
+            Multiplayer: {{game.multiplayer}}
+          {{else}}
+            No multiplayer provided.
+          {{/if}}
+          <br>
+        </p>
+        <div class="game-actions footer text-right">
+          <button type="button" class="update-video-game-btn btn-warning" data-toggle="modal"
+            data-target="#updateModal{{game.id}}">Update</button>
+            <!--Update VideoGame Modal-->
+            <div class="modal fade" id="updateModal{{game.id}}">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--Update VideoGame Data-->
+                    <form class="update-video-game">
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[name]" placeholder="Name">
+                        <input type='text' name="game[name]" placeholder="Name">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[developer]" placeholder="Developer">
+                        <input type='text' name="game[system]" placeholder="System">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='date' name="game[year]" placeholder="Date">
+                        <input type='text' name="game[developer]" placeholder="Developer">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[copy]" placeholder="Physical or Digital">
+                        <input type='date' name="game[year]" placeholder="Date">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[system]" placeholder="System">
+                        <label>Copy: </label>
+                        <input type='radio' id="physical" value="physical" name="game[copy]">
+                        <label for="physical">Physical</label>
+                        <input type='radio' id="digital" value="digital" name="game[copy]">
+                        <label for="digital">Digital</label>
                       </div>
                       <div class="form-group">
-                        Multiplayer: <input class="form-control" type='text' name="game[multiplayer]" placeholder="True or False">
+                        <label>Multiplayer: </label>
+                        <input type="radio" id="true" value="true" name="game[multiplayer]">
+                        <label for="true">True</label>
+                        <input type="radio" id="false" value="false" name="game[multiplayer]">
+                        <label for="false">False</label>
                       </div>
                       <button type="submit" class="btn-btn-warning">Update!</button>
-                  </form>
-                  <p id="update-message"></p>
-                  <!--Update VideoGame Data-->
+                    </form>
+                    <p id="update-message"></p>
+                    <!--Update VideoGame Data-->
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        <!--Update VideoGame Modal-->
-      <button type="submit" class="delete-video-game-btn btn-danger">Remove</button>
+          <!--Update VideoGame Modal-->
+        <button type="submit" class="delete-video-game-btn btn-danger">Remove</button>
+      </div>
+      <!-- </section> -->
     </div>
-    </section>
   </div>
-  <br>
+
 
 {{/each}}
 
