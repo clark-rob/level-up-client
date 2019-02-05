@@ -6,8 +6,15 @@ body {
   color: $rgba-primary-0 * 0.4;
 }
 
+.sign-up-btn,
+.access-btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
 .carousel {
-  padding: 20px 100px;
+  padding: 20px;
   width: auto;
 
   .carousel-caption {
@@ -21,19 +28,6 @@ body {
   }
 }
 
-.shown-game {
-  background-color: $rgba-primary-0 * 0.9;
-  margin: 50px auto 80px auto;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-}
-
-.welcome-message {
-  margin: auto;
-  width: 500px;
-}
-
 .recent-releases,
 .upcoming-releases {
   border: 2px solid $rgba-primary-0 * 0.9;
@@ -45,7 +39,21 @@ body {
   }
 }
 
+.shown-game {
+  background-color: $rgba-primary-0 * 0.9;
+  margin: 50px auto 80px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.welcome-message {
+  margin: auto;
+  width: 500px;
+}
+
+// elements hidden on load
 .log-out-screen,
 .navbar {
-  visibility: hidden;
+  display: none;
 }

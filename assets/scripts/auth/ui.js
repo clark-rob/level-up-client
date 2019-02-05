@@ -17,13 +17,14 @@ const signInSuccess = data => {
   store.user = data.user
   // hide
   $('.access-modal-change').text('Out')
-  $('.log-in-screen').css('visibility', 'hidden') // log in is hidden
-  $('#welcomeCarousel').css('visibility', 'hidden') // welcome carousel is hidden
-  $('.release-dates').css('visibility', 'hidden') // release-date divs hidden
+  $('.log-in-screen').hide() // log in is hidden
+  $('#welcomeCarousel').hide() // welcome carousel is hidden
+  $('.release-dates').hide() // release-date divs hidden
+  $('.sign-up-btn').hide() // sign up button hidden
   $('#accessModal').modal('hide') // closes modal after success
   // show
-  $('.log-out-screen').css('visibility', 'visible')
-  $('.navbar').css('visibility', 'visible')
+  $('.log-out-screen').show()
+  $('.navbar').show()
   // if (data.games.length > 0) {
   libraryEvents.onShowAllVideoGames() // calls showAllVideoGames api
   // }
@@ -49,13 +50,14 @@ const signOutSuccess = data => {
   store.user = null
   // show
   $('.access-modal-change').text('In')
-  $('.log-in-screen').css('visibility', 'visible') // log in is shown
-  $('#welcomeCarousel').css('visibility', 'visible') // welcome carousel is shown
-  $('.release-dates').css('visibility', 'visible') // release-date divs shown
+  $('.log-in-screen').show() // log in is shown
+  $('#welcomeCarousel').show() // welcome carousel is shown
+  $('.release-dates').show() // release-date divs shown
+  $('.sign-up-btn').show() // sign up button shown
   // hide
   $('#accessModal').modal('hide') // closes modal after success
-  $('.log-out-screen').css('visibility', 'hidden') // log out is hidden
-  $('.navbar').css('visibility', 'hidden') // navbar is hidden
+  $('.log-out-screen').hide() // log out is hidden
+  $('.navbar').hide() // navbar is hidden
   $('.game-card').empty() // game-cards emptied, hidden
 }
 
