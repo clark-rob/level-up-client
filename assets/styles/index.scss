@@ -34,9 +34,18 @@ body {
   width: 500px;
 }
 
-// .create-button,
-// #search-button,
-// .show-all-video-games,
-// #options-button {
-//   visibility: hidden;
-// }
+.recent-releases,
+.upcoming-releases {
+  border: 2px solid $rgba-primary-0 * 0.9;
+  height: 500px;
+  width: auto;
+
+  h4 {
+    text-align: center;
+  }
+}
+
+.log-out-screen,
+.navbar {
+  visibility: hidden;
+}

@@ -15,7 +15,6 @@ const onCreateVideoGame = event => { // function onCreateData uses the event sub
 }
 
 const onShowAllVideoGames = event => {
-  // event.preventDefault()
   api.showAllVideoGames()
     .then(ui.showAllVideoGamesSuccess)
     .catch(ui.showAllVideoGamesFailure)
