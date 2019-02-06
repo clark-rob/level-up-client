@@ -34,21 +34,20 @@ header {
 
 .btn-toolbar {
   margin: 0 22px;
-  padding: 10px 0;
+  padding: 10px 0 40px;
 }
 
 .shown-game {
   background-color: $rgba-primary-3;
   color: #fff;
-  margin: 50px auto 80px auto;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
+  margin: 20px auto;
+  padding: 0 auto 50px;
+  width: 200px;
 }
 
-// #create-button,
-// #search-button,
-// .show-all-video-games,
-// #options-button {
-//   display: none;
-// }
+#create-button,
+#search-button,
+.show-all-video-games,
+#options-button {
+  display: none;
+}

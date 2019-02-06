@@ -55,22 +55,38 @@
                         <input class="form-control" type="text" name="game[id]" placeholder="ID">
                       </div> -->
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[name]" placeholder="Name">
+                        <input class="form-control" type='text' name="game[name]" placeholder="Name" value="{{game.name}}">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[developer]" placeholder="Developer">
+                        <input class="form-control" type='text' name="game[system]" placeholder="System" value="{{game.system}}">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='date' name="game[year]" placeholder="Date">
+                        <input class="form-control" type='text' name="game[developer]" placeholder="Developer" value="{{game.developer}}">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[copy]" placeholder="Physical or Digital">
+                        <input class="form-control" type='date' name="game[year]" value="{{game.year}}">
                       </div>
                       <div class="form-group">
-                        <input class="form-control" type='text' name="game[system]" placeholder="System">
+                        Copy:
+                        <label>
+                          <input type="radio" value="physical" name="game[copy]">
+                          <span>Physical</span>
+                        </label>
+                        <label>
+                          <input type="radio" value="digital" name="game[copy]">
+                          <span>Digital</span>
+                        </label>
                       </div>
                       <div class="form-group">
-                        Multiplayer: <input class="form-control" type='text' name="game[multiplayer]" placeholder="True or False">
+                        Multiplayer:
+                        <label>
+                          <input type="radio" value="true" name="game[multiplayer]">
+                          <span>True</span>
+                        </label>
+                        <label>
+                          <input type="radio" value="false" name="game[multiplayer]">
+                          <span>False</span>
+                        </label>
                       </div>
                       <button type="submit" class="btn-btn-warning">Update!</button>
                   </form>
