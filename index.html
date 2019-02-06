@@ -13,7 +13,7 @@
     </head>
 
     <header>
-      <h1>Level Up: Personal Video Game Library</h2>
+      <h1>Level Up</h2>
     </header>
 
     <body>
@@ -133,20 +133,35 @@
                   <div class="modal-body">
                     <!--Create VideoGame Data-->
                     <form class="create-video-game">
-                      <input type='text' name="game[name]" placeholder="Name"><br/>
-                      <input type='text' name="game[developer]" placeholder="Developer"><br/>
-                      <input type='date' name="game[year]" placeholder="Date"><br/>
-                      <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
-                      <input type='text' name="game[system]" placeholder="System"><br/>
-                      Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
-                      <!-- <div name="game[multi]">
-                        <p>Multiplayer</p>
-                        <input type="radio" id="true" value="true">
-                        <label for="true">True</label>
-                        <input type="radio" id="false" value="false">
-                        <label for="false">False</label>
-                      </div> -->
-                      <input type="submit" value="Submit">
+                      <div class="form-group">
+                        <input type='text' name="game[name]" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <input type='text' name="game[system]" placeholder="System">
+                      </div>
+                      <div class="form-group">
+                        <input type='text' name="game[developer]" placeholder="Developer">
+                      </div>
+                      <div class="form-group">
+                        <input type='date' name="game[year]" placeholder="Date">
+                      </div>
+                      <div class="form-group">
+                        Copy:
+                          <input type='radio' name="game[copy]" id="physical" value="Physical">
+                          <label for="physical">Physical</label>
+                          <input type='radio' name="game[copy]" id="digital" value="Digital">
+                          <label for="digital">Digital</label>
+                      </div>
+                      <div class="form-group">
+                        Multiplayer:
+                          <input type="radio" id="true" value="true" name="game[multiplayer]">
+                          <label for="true">True</label>
+                          <input type="radio" id="false" value="false" name="game[multiplayer]">
+                          <label for="false">False</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" value="Submit">
+                      </div>
                     </form>
                     <p id="create-message"></p>
                     <!--Create VideoGame Data-->

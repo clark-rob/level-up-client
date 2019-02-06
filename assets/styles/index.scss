@@ -39,15 +39,16 @@ header {
 
 .shown-game {
   background-color: $rgba-primary-3;
+  color: #fff;
   margin: 50px auto 80px auto;
   padding: 20px;
   text-align: center;
   width: 300px;
 }
 
-#create-button,
-#search-button,
-.show-all-video-games,
-#options-button {
-  visibility: hidden;
-}
+// #create-button,
+// #search-button,
+// .show-all-video-games,
+// #options-button {
+//   display: none;
+// }

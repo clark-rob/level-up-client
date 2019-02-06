@@ -20,6 +20,7 @@ const createVideoGameFailure = () => {
 const showAllVideoGamesSuccess = data => {
   const showGamesHtml = showGamesTemplate({ games: data.games })
   $('.show-message').html(showGamesHtml)
+  console.log(data.games[3].year.slice(0, 4))
 }
 
 const showAllVideoGamesFailure = () => {
