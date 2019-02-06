@@ -1,7 +1,7 @@
 {{#each games as |game|}}
 
 <!-- each div is givin an h1 with data-id of the game.id -->
-  <div class="card shown-game">
+  <div class="shown-game">
     <div class="card-body">
       <h1 data-id="{{game.id}}"><small>{{game.name}}</small></h1>
       <section data-id="{{game.id}}">
@@ -27,7 +27,7 @@
           {{/if}}
           <br>
         </p>
-        <div class="game-actions footer text-right">
+        <div class="game-actions">
           <button type="button" class="update-video-game-btn btn-warning" data-toggle="modal"
             data-target="#updateModal{{game.id}}">Update</button>
             <!--Update VideoGame Modal-->

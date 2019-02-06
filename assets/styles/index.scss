@@ -2,15 +2,24 @@
 @import 'colors';
 
 body {
-  // background-color: $rgba-primary-0;
-  color: $rgba-primary-0 * 0.4;
+  // background-color: $main;
+  color: darken($main, 15%);
+  // max-width: 1080px;
 }
 
 .sign-up-btn,
-.access-btn {
+.access-btn,
+.account-btn,
+.create-btn,
+.search-btn,
+.show-all-btn {
   display: inline-block;
-  margin: 5px;
-  padding: 5px 10px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.card-deck {
+  margin: 0 7px;
 }
 
 .carousel {
@@ -18,19 +27,24 @@ body {
   width: auto;
 
   .carousel-caption {
-    background-color: $rgba-primary-0 * 0.9;
+    background-color: $main;
   }
 
   .carousel-indicators {
     li {
-      background-color: #0f0;
+      background-color: $main;
     }
   }
 }
 
+.game-actions {
+  bottom: 5px;
+  position: absolute;
+}
+
 .recent-releases,
 .upcoming-releases {
-  border: 2px solid $rgba-primary-0 * 0.9;
+  border: 2px solid $main;
   height: 500px;
   width: auto;
 
@@ -40,11 +54,14 @@ body {
 }
 
 .shown-game {
-  background-color: $rgba-primary-0 * 0.9;
-  margin: 50px auto 80px;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
+  align-items: center;
+  background-color: $main;
+  color: #fff;
+  height: 300px;
+  margin-left: 15px;
+  margin-top: 15px;
+  position: relative;
+  width: 200px;
 }
 
 .welcome-message {
@@ -53,7 +70,19 @@ body {
 }
 
 // elements hidden on load
-.log-out-screen,
-.navbar {
-  display: none;
-}
+// .log-out-screen,
+// .navbar {
+//   display: none;
+// }
+
+// @media (max-width: 930px) {
+//   .shown-game {
+//     text-orientation: mixed;
+//     width: 100px;
+//     writing-mode: vertical-rl;
+//
+//     p {
+//       display: none;
+//     }
+//   }
+// }
