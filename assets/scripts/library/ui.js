@@ -6,15 +6,11 @@ const showOneGameTemplate = require('../templates/one-game-listing.handlebars')
 const createVideoGameSuccess = data => {
   store.game = data.game
   $('#create-message').show().text('New Game Created')
-  $('#create-message').removeClass()
-  $('#create-message').addClass('success')
   $('#create-message').fadeOut(5000)
 }
 
 const createVideoGameFailure = () => {
   $('#create-message').show().text('Error Creating Game')
-  $('#create-message').removeClass()
-  $('#create-message').addClass('failure')
 }
 
 const showAllVideoGamesSuccess = data => {
@@ -24,8 +20,6 @@ const showAllVideoGamesSuccess = data => {
 
 const showAllVideoGamesFailure = () => {
   $('.show-message').show().text('These are not the games you are looking for...')
-  $('.show-message').removeClass()
-  $('.show-message').addClass('failure')
 }
 
 const showOneVideoGameSuccess = data => {
@@ -35,12 +29,12 @@ const showOneVideoGameSuccess = data => {
 
 const showOneVideoGameFailure = () => {
   $('.show-message').show().text("We can't seem to find the game. Was everything correct?")
-  $('.show-message').removeClass()
-  $('.show-message').addClass('failure')
 }
 
 const updateVideoGameSuccess = data => {
-  $('#update-message').show().text('Updated Game')
+  // $('#update-message').show().text('Updated Game')
+  const id = data.game.id
+  $('#updateModal' + id).modal('hide')
 }
 
 const updateVideoGameFailure = () => {

@@ -45,8 +45,9 @@ const onUpdateVideoGame = event => {
   const videoGameId = $(event.target).closest('section').data('id')
   api.updateVideoGame(videoGameId, data)
     .then(ui.updateVideoGameSuccess)
+    .then(() => onShowAllVideoGames(event)) // .click show all button instead?
     .catch(ui.updateVideoGameFailure)
-  $(event.target).trigger('reset')
+  // $(event.target).trigger('reset')
 }
 
 const onDeleteOneVideoGame = event => {
