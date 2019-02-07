@@ -16,24 +16,28 @@
       <div class="top-bar">
         <h1>Level Up</h1>
       </div>
-
+      <!-- NavBar -->
       <div class="btn-toolbar justify-content-between" role="toolbar">
 
         <!-- Game Actions Grouping -->
         <div class="btn-group" role="group" aria-label="video-game-group">
-          <!--Create VideoGame Modal-->
-          <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
+          <!-- Create VideoGame Button -->
+          <button type="button" class="create-btn btn-success" data-toggle="modal"
             data-target="#createVideoGameModal">Create Game</button>
+            <!-- End Create VideoGame Button -->
 
+            <!-- Create VideoGame Modal -->
             <div class="modal fade" id="createVideoGameModal">
               <div class="modal-dialog">
                 <div class="modal-content">
+
                   <div class="modal-header">
-                    <h5 class="modal-title" id="createVideoGameModalLabel">Create VideoGame</h5>
+                    <h5 class="modal-title">Create VideoGame</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
+
                   <div class="modal-body">
-                    <!--Create VideoGame Data-->
+                    <!-- Create VideoGame Form -->
                     <form class="create-video-game">
                       <div class="form-group">
                         <input type='text' name="game[name]" placeholder="Name">
@@ -73,55 +77,57 @@
                         <input type="submit" value="Submit">
                       </div>
                     </form>
-                    <p id="create-message"></p>
-                    <!--Create VideoGame Data-->
+                    <p class="create-message"></p>
+                    <!-- End Create VideoGame Form -->
                   </div>
                 </div>
               </div>
             </div>
-          <!--Create VideoGame Modal-->
+          <!-- End Create VideoGame Modal -->
 
-          <!--Show VideoGame Data-->
-          <input class="show-all-video-games btn btn-primary" type="button" value='Show Games'>
-          <!--Show VideoGame Data-->
+          <!-- Show VideoGame Button -->
+          <input class="show-all-btn btn-primary" type="button" value='Show Games'>
+          <!-- End Show VideoGame Button -->
 
-          <!--Search One VideoGame Modal-->
-          <button type="button" id="search-button" class="btn btn-warning" data-toggle="modal"
+          <!-- Search One VideoGame Modal -->
+          <button type="button" class="search-btn btn-warning" data-toggle="modal"
             data-target="#searchVideoGameModal">Search Game</button>
 
             <div class="modal fade" id="searchVideoGameModal">
               <div class="modal-dialog">
                 <div class="modal-content">
+
                   <div class="modal-header">
-                    <h5 class="modal-title" id="searchVideoGameModalLabel">Search for a VideoGame</h5>
+                    <h5 class="modal-title">Search for a VideoGame</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
+
                   <div class="modal-body">
-                    <!--Show One VideoGame Data-->
+                    <!-- Show One VideoGame Form -->
                     <form class="show-one-video-game">
                       <fieldset>
                         <input type ='text' name='game[id]' placeholder="ID">
                         <input type="submit" value="Search by ID">
                       </fieldset>
                     </form>
-                    <!--Show One VideoGame Data-->
+                    <!-- End Show One VideoGame Form -->
                     <br>
 
-                    <!--Search One VideoGame Data-->
+                    <!-- Search One VideoGame Form -->
                     <form class="search-one-video-game">
                       <fieldset>
                         <input type ='text' name='game[name]' placeholder="Name">
                         <input type="submit" value="Search by Name">
                       </fieldset>
                     </form>
-                    <!--Search One VideoGame Data-->
+                    <!-- End Search One VideoGame Form -->
                   </div>
                 </div>
               </div>
             </div>
-          <!--Search One VideoGame Modal-->
+          <!-- End Search One VideoGame Modal -->
         </div>
-        <!-- Game Actions Grouping -->
+        <!-- End Game Actions Grouping -->
 
         <!-- Auth Grouping -->
         <div class="btn-group" role="group" aria-label="auth-group">
@@ -137,7 +143,7 @@
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <!--token-auth training-->
+                    <!-- token-auth training -->
                     <p id="up-message"></p>
 
                     <form id="sign-up">
@@ -168,7 +174,7 @@
                      </div>
                       <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
-                    <!--token-auth training-->
+                    <!-- End token-auth training -->
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
@@ -176,9 +182,9 @@
                 </div>
               </div>
             </div>
-          <!--Sign Up/In Modal-->
+          <!-- End Sign Up/In Modal -->
 
-          <!-- Sign Out/PW Modal-->
+          <!-- Sign Out/PW Modal -->
           <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
             data-target="#optionsModal">Options</button>
 
@@ -210,7 +216,7 @@
                       <button type="submit" class="btn btn-danger">Sign Out</button>
                     </form>
 
-                    <!--token-auth training-->
+                    <!--End token-auth training-->
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
@@ -218,19 +224,20 @@
                 </div>
               </div>
             </div>
-          <!--Sign Out/PW Modal-->
+          <!--End Sign Out/PW Modal-->
         </div>
-        <!-- Auth Grouping -->
+        <!-- End Auth Grouping -->
       </div>
+      <!-- End NavBar -->
 
       <!-- View Game Area -->
       <div class="show-message"></div>
-      <!-- View Game Area -->
+      <!-- End View Game Area -->
 
       <!-- Bottom Bar -->
       <div class="bottom-bar">
         <p>BroccoliRob Creation</p>
       </div>
-      <!-- Bottom Bar -->
+      <!-- End Bottom Bar -->
     </body>
 </html>

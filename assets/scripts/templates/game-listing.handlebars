@@ -2,7 +2,7 @@
 
 <!-- each div is givin an h1 with data-id of the game.id -->
   <div class="shown-game">
-    <h1 data-id="{{game.id}}"><small>{{limit game.name 20}}</small></h1>
+    <h1 data-id="{{game.id}}"><small>{{limit game.name 15}}</small></h1>
     <section data-id="{{game.id}}">
       <p>
         ID: {{game.id}}
@@ -38,7 +38,7 @@
         {{/if}}
       </p>
       <div class="game-actions footer text-right">
-        <button type="button" class="update-video-game-btn btn-warning" data-toggle="modal"
+        <button type="button" class="update-modal-btn btn-warning" data-toggle="modal"
           data-target="#updateModal{{game.id}}">Update</button>
           <!--Update VideoGame Modal-->
           <div class="modal fade" id="updateModal{{game.id}}">
@@ -85,15 +85,14 @@
                           <span>False</span>
                         </label>
                       </div>
-                      <button type="submit" class="btn-btn-warning">Update!</button>
+                      <button type="submit" class="update-btn btn-warning">Update!</button>
                   </form>
-                  <p id="update-message"></p>
-                  <!--Update VideoGame Data-->
+                  <!--End Update VideoGame Data-->
                 </div>
               </div>
             </div>
           </div>
-        <!--Update VideoGame Modal-->
+        <!--End Update VideoGame Modal-->
       <button type="submit" class="delete-video-game-btn btn-danger">Remove</button>
     </div>
     </section>
