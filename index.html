@@ -12,112 +12,14 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
-    <header>
-      <h1>Level Up</h2>
-    </header>
-
     <body>
+      <div class="top-bar">
+        <h1>Level Up</h1>
+      </div>
+
       <div class="btn-toolbar justify-content-between" role="toolbar">
 
-        <!-- Auth Grouping -->
-        <div class="btn-group" role="group" aria-label="auth-group">
-        <!-- Sign Up/In Modal-->
-          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
-            data-target="#authorizationModal">Sign Up/In</button>
-
-            <div class="modal fade" id="authorizationModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header text-center">
-                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--token-auth training-->
-                    <p id="up-message"></p>
-
-                    <form id="sign-up">
-                      <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="credentials[password]"
-                         placeholder="Password">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="credentials[password_confirmation]"
-                         placeholder="Confirm Password">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Sign Up!</button>
-                    </form>
-                    <br><hr>
-
-                    <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
-                    <hr><br>
-                    <form id="sign-in" class="form-inline"> <!--id of form is used-->
-                      <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="credentials[password]"
-                       placeholder="Password">
-                     </div>
-                      <button type="submit" class="btn btn-primary">Sign In</button>
-                    </form>
-                    <!--token-auth training-->
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Sign Up/In Modal-->
-
-          <!-- Sign Out/PW Modal-->
-          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
-            data-target="#optionsModal">Options</button>
-
-            <div class="modal fade" id="optionsModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--token-auth training-->
-                    <p id="out-message"></p>
-
-                    <form id="change-password" class="form-inline">
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="passwords[old]"
-                         placeholder="OldPassword">
-                      </div>
-                      <div class="form-group">
-                        <input class="form-control" type="password" name="passwords[new]"
-                         placeholder="New Password">
-                      </div>
-                      <button type="submit" class="btn btn-primary">Change password</button>
-                    </form>
-                    <br>
-
-                    <form id="sign-out" >
-                      <button type="submit" class="btn btn-danger">Sign Out</button>
-                    </form>
-
-                    <!--token-auth training-->
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Sign Out/PW Modal-->
-        </div>
-        <!-- Auth Grouping -->
-
+        <!-- Game Actions Grouping -->
         <div class="btn-group" role="group" aria-label="video-game-group">
           <!--Create VideoGame Modal-->
           <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
@@ -219,10 +121,116 @@
             </div>
           <!--Search One VideoGame Modal-->
         </div>
+        <!-- Game Actions Grouping -->
+
+        <!-- Auth Grouping -->
+        <div class="btn-group" role="group" aria-label="auth-group">
+        <!-- Sign Up/In Modal-->
+          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#authorizationModal">Sign Up/In</button>
+
+            <div class="modal fade" id="authorizationModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header text-center">
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="up-message"></p>
+
+                    <form id="sign-up">
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password]"
+                         placeholder="Password">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password_confirmation]"
+                         placeholder="Confirm Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign Up!</button>
+                    </form>
+                    <br><hr>
+
+                    <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
+                    <hr><br>
+                    <form id="sign-in" class="form-inline"> <!--id of form is used-->
+                      <div class="form-group">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="credentials[password]"
+                       placeholder="Password">
+                     </div>
+                      <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Sign Up/In Modal-->
+
+          <!-- Sign Out/PW Modal-->
+          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
+            data-target="#optionsModal">Options</button>
+
+            <div class="modal fade" id="optionsModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+                  <div class="modal-body">
+                    <!--token-auth training-->
+                    <p id="out-message"></p>
+
+                    <form id="change-password" class="form-inline">
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[old]"
+                         placeholder="OldPassword">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="password" name="passwords[new]"
+                         placeholder="New Password">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Change password</button>
+                    </form>
+                    <br>
+
+                    <form id="sign-out" >
+                      <button type="submit" class="btn btn-danger">Sign Out</button>
+                    </form>
+
+                    <!--token-auth training-->
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--Sign Out/PW Modal-->
+        </div>
+        <!-- Auth Grouping -->
       </div>
-      <p class="show-message"></p>
-      <div class="bottom-bar"></div>
+
+      <!-- View Game Area -->
+      <div class="show-message"></div>
+      <!-- View Game Area -->
+
+      <!-- Bottom Bar -->
+      <div class="bottom-bar">
+        <p>BroccoliRob Creation</p>
+      </div>
+      <!-- Bottom Bar -->
     </body>
-    <footer>
-    </footer>
 </html>
