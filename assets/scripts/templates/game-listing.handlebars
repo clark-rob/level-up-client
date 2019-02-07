@@ -7,16 +7,16 @@
       <p>
         ID: {{game.id}}
         <br>
-        {{#if game.developer}}
-          {{game.developer}}
-        {{else}}
-          No developer provided.
-        {{/if}}
-        <br>
         {{#if game.system}}
           {{game.system}}
         {{else}}
           No system provided.
+        {{/if}}
+        <br>
+        {{#if game.developer}}
+          {{game.developer}}
+        {{else}}
+          No developer provided.
         {{/if}}
         <br>
         {{#if game.copy}}
@@ -28,7 +28,7 @@
         {{#if game.multiplayer}}
           Multiplayer: {{game.multiplayer}}
         {{else}}
-          No multiplayer provided.
+          Multiplayer: False
         {{/if}}
         <br>
         {{#if game.year}}
