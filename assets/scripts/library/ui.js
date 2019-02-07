@@ -1,10 +1,8 @@
 'use strict'
-const store = require('../store.js')
 const showGamesTemplate = require('../templates/game-listing.handlebars')
 const showOneGameTemplate = require('../templates/one-game-listing.handlebars')
 
 const createVideoGameSuccess = data => {
-  store.game = data.game
   $('#create-message').show().text('New Game Created')
   $('#create-message').fadeOut(5000)
 }
@@ -32,9 +30,10 @@ const showOneVideoGameFailure = () => {
 }
 
 const updateVideoGameSuccess = data => {
-  // $('#update-message').show().text('Updated Game')
   const id = data.game.id
-  $('#updateModal' + id).modal('hide')
+  $('#updateModal' + id).modal('hide') // closes modal
+  $('.modal-backdrop').fadeOut() // removes backdrop of modal
+  $('.modal-open').removeClass() // removes modal class from body
 }
 
 const updateVideoGameFailure = () => {

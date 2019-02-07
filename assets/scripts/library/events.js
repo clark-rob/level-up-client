@@ -15,7 +15,6 @@ const onCreateVideoGame = event => { // function onCreateData uses the event sub
 }
 
 const onShowAllVideoGames = event => {
-  event.preventDefault()
   api.showAllVideoGames()
     .then(ui.showAllVideoGamesSuccess)
     .catch(ui.showAllVideoGamesFailure)
@@ -43,11 +42,11 @@ const onUpdateVideoGame = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const videoGameId = $(event.target).closest('section').data('id')
+  // clicking on the button passes the id of the selected game
   api.updateVideoGame(videoGameId, data)
     .then(ui.updateVideoGameSuccess)
-    .then(() => onShowAllVideoGames(event)) // .click show all button instead?
+    .then(() => onShowAllVideoGames(event))
     .catch(ui.updateVideoGameFailure)
-  // $(event.target).trigger('reset')
 }
 
 const onDeleteOneVideoGame = event => {
