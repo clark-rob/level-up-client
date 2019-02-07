@@ -37,6 +37,12 @@ body {
   padding: 10px 0 40px;
 }
 
+.game-actions {
+  bottom: 0;
+  margin: 5px 15px;
+  position: absolute;
+}
+
 .modal {
   box-shadow: 0 0 100px $rgba-primary-3;
   color: #000;
@@ -52,8 +58,10 @@ body {
 .shown-game {
   background-color: $rgba-primary-3;
   color: #fff;
-  margin: 10px;
+  height: 300px;
+  margin: 1em;
   padding: 10px;
+  position: relative;
   width: 200px;
 }
 
