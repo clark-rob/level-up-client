@@ -27,9 +27,15 @@ body {
   height: 50px;
   padding-top: 30px;
   position: fixed;
+  text-align: right;
   top: 100vh;
   transform: translateY(-100%);
   width: 100%;
+
+  p {
+    color: $rgba-primary-4 * .9;
+    padding-right: 10px;
+  }
 }
 
 .btn-toolbar {
@@ -63,11 +69,15 @@ body {
   padding: 10px;
   position: relative;
   width: 200px;
+
+  p {
+    text-transform: capitalize;
+  }
 }
 
-#create-button,
-#search-button,
-.show-all-video-games,
-#options-button {
+.create-btn,
+.search-btn,
+.show-all-btn,
+.options-btn {
   display: none;
 }

@@ -90,7 +90,7 @@
           <!-- End Show VideoGame Button -->
 
           <!-- Search One VideoGame Modal -->
-          <button type="button" class="search-btn btn-warning" data-toggle="modal"
+          <button class="search-btn btn-warning" data-toggle="modal"
             data-target="#searchVideoGameModal">Search Game</button>
 
             <div class="modal fade" id="searchVideoGameModal">
@@ -105,20 +105,16 @@
                   <div class="modal-body">
                     <!-- Show One VideoGame Form -->
                     <form class="show-one-video-game">
-                      <fieldset>
                         <input type ='text' name='game[id]' placeholder="ID">
-                        <input type="submit" value="Search by ID">
-                      </fieldset>
+                        <button type="submit" class="show-one-btn btn-warning">Search by ID</button>
                     </form>
                     <!-- End Show One VideoGame Form -->
                     <br>
 
                     <!-- Search One VideoGame Form -->
                     <form class="search-one-video-game">
-                      <fieldset>
                         <input type ='text' name='game[name]' placeholder="Name">
-                        <input type="submit" value="Search by Name">
-                      </fieldset>
+                        <button type="submit" class="search-one-btn btn-warning">Search by Name</button>
                     </form>
                     <!-- End Search One VideoGame Form -->
                   </div>
@@ -131,22 +127,25 @@
 
         <!-- Auth Grouping -->
         <div class="btn-group" role="group" aria-label="auth-group">
+
         <!-- Sign Up/In Modal-->
-          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
+          <button type="button" class="sign-up-btn btn-primary" data-toggle="modal"
             data-target="#authorizationModal">Sign Up/In</button>
 
             <div class="modal fade" id="authorizationModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header text-center">
-                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
+
+                    <h5 class="modal-title">Sign Up</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
-                  <div class="modal-body">
-                    <!-- token-auth training -->
-                    <p id="up-message"></p>
 
-                    <form id="sign-up">
+                  <div class="modal-body">
+                    <!-- Sign Up Form -->
+                    <p class="sign-up-message"></p>
+
+                    <form class="sign-up">
                       <div class="form-group">
                         <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
                       </div>
@@ -161,10 +160,12 @@
                       <button type="submit" class="btn btn-primary">Sign Up!</button>
                     </form>
                     <br><hr>
+                    <!-- End Sign Up Form -->
 
+                    <!-- Sign In Form -->
                     <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
                     <hr><br>
-                    <form id="sign-in" class="form-inline"> <!--id of form is used-->
+                    <form class="sign-in form-inline">
                       <div class="form-group">
                         <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
                       </div>
@@ -174,10 +175,10 @@
                      </div>
                       <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
-                    <!-- End token-auth training -->
+                    <!-- End Sign In Form -->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="close-modal-btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -185,19 +186,19 @@
           <!-- End Sign Up/In Modal -->
 
           <!-- Sign Out/PW Modal -->
-          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
+          <button class="options-btn btn-primary" data-toggle="modal"
             data-target="#optionsModal">Options</button>
 
             <div class="modal fade" id="optionsModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
+                    <h5 class="modal-title">Options</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <!--token-auth training-->
-                    <p id="out-message"></p>
+                    <!-- Change Password Form -->
+                    <p class="out-message"></p>
 
                     <form id="change-password" class="form-inline">
                       <div class="form-group">
@@ -211,15 +212,17 @@
                       <button type="submit" class="btn btn-primary">Change password</button>
                     </form>
                     <br>
+                    <!-- End Change Password Form -->
 
-                    <form id="sign-out" >
+                    <!-- Sign Out Button -->
+                    <form class="sign-out" >
                       <button type="submit" class="btn btn-danger">Sign Out</button>
                     </form>
+                    <!-- End Sign Out Button -->
 
-                    <!--End token-auth training-->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="close-modal-btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
