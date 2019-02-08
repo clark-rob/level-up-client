@@ -1,9 +1,18 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'colors';
 
+// font-family: 'VT323', monospace;
+// font-family: 'Audiowide', cursive;
+// font-family: 'Monofett', cursive;
+
 body {
   background-color: $rgba-primary-0;
   color: $rgba-primary-2;
+  font-family: 'Audiowide', cursive;
+}
+
+h1 {
+  font-family: 'Monofett', cursive;
 }
 
 .top-bar {
@@ -64,13 +73,20 @@ body {
 .shown-game {
   background-color: $rgba-primary-3;
   color: #fff;
-  height: 300px;
+  height: 350px;
   margin: 1em;
   padding: 10px;
   position: relative;
-  width: 200px;
+  text-align: center;
+  width: 300px;
+
+  h1 {
+    color: $rgba-primary-1;
+  }
 
   p {
+    display: inline-block;
+    text-align: center;
     text-transform: capitalize;
   }
 }
