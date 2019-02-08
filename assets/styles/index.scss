@@ -1,7 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'colors';
 
-// font-family: 'VT323', monospace;
 // font-family: 'Audiowide', cursive;
 // font-family: 'Monofett', cursive;
 
@@ -53,9 +52,9 @@ h1 {
 }
 
 .game-actions {
-  bottom: 0;
-  margin: 5px 15px;
-  position: absolute;
+  // bottom: 0;
+  // margin: 5px 15px;
+  // position: absolute;
 }
 
 .modal {
@@ -67,26 +66,28 @@ h1 {
 .show-message {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  margin-left: 10px;
 }
 
 .shown-game {
+  align-items: flex-end;
   background-color: $rgba-primary-3;
   color: #fff;
+  display: flex;
+  flex-wrap: wrap;
   height: 350px;
   margin: 1em;
   padding: 10px;
-  position: relative;
-  text-align: center;
   width: 300px;
 
   h1 {
+    align-self: flex-start;
     color: $rgba-primary-1;
   }
 
   p {
-    display: inline-block;
-    text-align: center;
     text-transform: capitalize;
   }
 }
