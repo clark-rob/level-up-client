@@ -12,6 +12,22 @@ const createVideoGameFailure = () => {
 }
 
 const showAllVideoGamesSuccess = data => {
+  // organize alphabetically function
+  const games = data.games
+  games.sort(function (a, b) {
+    const nameA = a.name.toUpperCase() // ignore upper and lowercase
+    const nameB = b.name.toUpperCase() // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1
+    }
+    if (nameA > nameB) {
+      return 1
+    }
+    // names must be equal
+    return 0
+  })
+  // end alpha function
+  // variable that takes in the data from show-all-template
   const showGamesHtml = showGamesTemplate({ games: data.games })
   $('.show-message').html(showGamesHtml)
 }
@@ -37,7 +53,7 @@ const updateVideoGameSuccess = data => {
 }
 
 const updateVideoGameFailure = () => {
-  $('#update-message').show().text('Do you have the authority to change that?')
+  $('.update-message').show().text('Do you have the authority to change that?')
 }
 
 module.exports = {

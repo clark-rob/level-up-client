@@ -38,18 +38,21 @@
       {{/if}}
     </p>
     <div class="game-actions footer text-right">
+      <!-- Update Button -->
       <button type="button" class="update-modal-btn btn-warning" data-toggle="modal"
         data-target="#updateModal{{game.id}}">Update</button>
-        <!--Update VideoGame Modal-->
+        <!-- End Update Button -->
+
+        <!-- Update VideoGame Modal -->
         <div class="modal fade" id="updateModal{{game.id}}">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="updateModalLabel">Update</h5>
+                <h5 class="modal-title">Update</h5>
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
               </div>
               <div class="modal-body">
-                <!--Update VideoGame Data-->
+                <!-- Update Form -->
                 <form class="update-video-game">
                     <div class="form-group">
                       <input class="form-control" type='text' name="game[name]" placeholder="Name" value="{{game.name}}">
@@ -87,14 +90,18 @@
                     </div>
                     <button type="submit" class="btn-btn-warning">Update!</button>
                 </form>
-                <p id="update-message"></p>
-                <!--End Update VideoGame Data-->
+                <!-- End Update Form -->
+                <p class="update-message"></p>
               </div>
             </div>
           </div>
         </div>
-      <!--End Update VideoGame Modal-->
+      <!-- End Update VideoGame Modal -->
+
+    <!-- Delete Button -->
     <button type="submit" class="delete-video-game-btn btn-danger">Remove</button>
+    <!-- End Delete Button -->
+
   </div>
   </section>
 </div>
