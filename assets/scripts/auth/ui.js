@@ -14,6 +14,7 @@ const signUpFailure = () => { // removed error parameter
 const signInSuccess = data => {
   store.user = data.user
   $('.options-btn').show() // show options button
+  $('.welcome-message').hide() // hide opening message
   $('.sign-up-btn').hide() // sign up is hidden
   $('#authorizationModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
@@ -39,8 +40,8 @@ const changePasswordFailure = () => { // removed error parameter
 
 const signOutSuccess = data => {
   store.user = null
-  $('#username').text('') // removes text for username
   $('.options-btn').hide() // sets option buton back to hidden
+  $('.welcome-message').show() // show opening message
   $('.sign-up-btn').show() // sign up appears
   $('#optionsModal').modal('hide') // closes modal after success
   /* Video Game Logging show */
