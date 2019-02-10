@@ -44,9 +44,8 @@ const searchOneVideoGame = (data) => {
   })
 }
 
-const updateVideoGame = data => {
-  const id = data.game.id
-  delete data.game.id
+const updateVideoGame = (videoGameId, data) => {
+  const id = videoGameId
   return $.ajax({
     url: config.apiUrl + '/games/' + id,
     method: 'PATCH',

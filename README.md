@@ -1,6 +1,8 @@
 ## Level UP
 A personal video game log application of all your pride possessions.
 
+![alt screenshot](./public/level-up-screenshot.png)
+
 ## Description
 Create a personal account that saves your video game collection for
 your eyes only.
@@ -69,11 +71,9 @@ from the crowd.
 
 ## Future Fixes
 - MAKE WORK DRY!!!!!
-- Work on CSS, improve UX
 - update searching feature by adding other paramaters
   - by system, etc.
 - generate a random game
-- when updating a game, only update needed param
 
 ## Bonus Accomplishments
 - link to thrid party API

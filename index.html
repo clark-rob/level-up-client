@@ -6,37 +6,146 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+      <link href="https://fonts.googleapis.com/css?family=Audiowide|Monofett|VT323" rel="stylesheet">
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
-    <header>
-      <h1>Level Up: Personal Video Game Library</h2>
-    </header>
-
     <body>
+      <div class="top-bar">
+        <h1>Level_Up</h1>
+      </div>
+      <!-- NavBar -->
       <div class="btn-toolbar justify-content-between" role="toolbar">
+
+        <!-- Game Actions Grouping -->
+        <div class="btn-group" role="group" aria-label="video-game-group">
+          <!-- Create VideoGame Button -->
+          <button type="button" class="create-btn btn-success" data-toggle="modal"
+            data-target="#createVideoGameModal">Create</button>
+            <!-- End Create VideoGame Button -->
+
+            <!-- Create VideoGame Modal -->
+            <div class="modal fade" id="createVideoGameModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title">Create VideoGame</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <!-- Create VideoGame Form -->
+                    <form class="create-video-game">
+                      <div class="form-group">
+                        <input type='text' name="game[name]" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <input type='text' name="game[system]" placeholder="System">
+                      </div>
+                      <div class="form-group">
+                        <input type='text' name="game[developer]" placeholder="Developer">
+                      </div>
+                      <div class="form-group">
+                        <input type='date' name="game[year]" placeholder="Date">
+                      </div>
+                      <div class="form-group">
+                        Copy:
+                        <label>
+                          <input type="radio" value="physical" name="game[copy]">
+                          <span>Physical</span>
+                        </label>
+                        <label>
+                          <input type="radio" value="digital" name="game[copy]">
+                          <span>Digital</span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        Multiplayer:
+                        <label>
+                          <input type="radio" value="true" name="game[multiplayer]">
+                          <span>True</span>
+                        </label>
+                        <label>
+                          <input type="radio" value="false" name="game[multiplayer]">
+                          <span>False</span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" value="Submit">
+                      </div>
+                    </form>
+                    <p class="create-message"></p>
+                    <!-- End Create VideoGame Form -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- End Create VideoGame Modal -->
+
+          <!-- Show VideoGame Button -->
+          <input class="show-all-btn btn-primary" type="button" value='My Games'>
+          <!-- End Show VideoGame Button -->
+
+          <!-- Search One VideoGame Modal -->
+          <button class="search-btn btn-warning" data-toggle="modal"
+            data-target="#searchVideoGameModal">Search</button>
+
+            <div class="modal fade" id="searchVideoGameModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h5 class="modal-title">Search for a VideoGame</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <!-- Show One VideoGame Form -->
+                    <form class="show-one-video-game">
+                        <input type ='text' name='game[id]' placeholder="ID">
+                        <button type="submit" class="show-one-btn btn-warning">Search by ID</button>
+                    </form>
+                    <!-- End Show One VideoGame Form -->
+                    <br>
+
+                    <!-- Search One VideoGame Form -->
+                    <form class="search-one-video-game">
+                        <input type ='text' name='game[name]' placeholder="Name">
+                        <button type="submit" class="search-one-btn btn-warning">Search by Name</button>
+                    </form>
+                    <!-- End Search One VideoGame Form -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- End Search One VideoGame Modal -->
+        </div>
+        <!-- End Game Actions Grouping -->
 
         <!-- Auth Grouping -->
         <div class="btn-group" role="group" aria-label="auth-group">
+
         <!-- Sign Up/In Modal-->
-          <button type="button" id="sign-up-button" class="btn btn-primary" data-toggle="modal"
+          <button type="button" class="sign-up-btn btn-primary" data-toggle="modal"
             data-target="#authorizationModal">Sign Up/In</button>
 
             <div class="modal fade" id="authorizationModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header text-center">
-                    <h5 class="modal-title" id="authorizationModalLabel">Sign Up</h5>
+
+                    <h5 class="modal-title">Sign Up</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
-                  <div class="modal-body">
-                    <!--token-auth training-->
-                    <p id="up-message"></p>
 
-                    <form id="sign-up">
+                  <div class="modal-body">
+                    <!-- Sign Up Form -->
+                    <p class="sign-up-message"></p>
+
+                    <form class="sign-up">
                       <div class="form-group">
                         <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
                       </div>
@@ -51,43 +160,45 @@
                       <button type="submit" class="btn btn-primary">Sign Up!</button>
                     </form>
                     <br><hr>
+                    <!-- End Sign Up Form -->
 
+                    <!-- Sign In Form -->
                     <h5 class="modal-title" id="authorizationModalLabel">Sign In</h5>
                     <hr><br>
-                    <form id="sign-in" class="form-inline"> <!--id of form is used-->
+                    <form class="sign-in form-inline">
                       <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email" value="r@c.com">
                       </div>
                       <div class="form-group">
                         <input class="form-control" type="password" name="credentials[password]"
-                       placeholder="Password">
+                       placeholder="Password" value="r">
                      </div>
                       <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
-                    <!--token-auth training-->
+                    <!-- End Sign In Form -->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="close-modal-btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
-          <!--Sign Up/In Modal-->
+          <!-- End Sign Up/In Modal -->
 
-          <!-- Sign Out/PW Modal-->
-          <button type="button" id="options-button" class="btn btn-primary" data-toggle="modal"
+          <!-- Sign Out/PW Modal -->
+          <button class="options-btn btn-primary" data-toggle="modal"
             data-target="#optionsModal">Options</button>
 
             <div class="modal fade" id="optionsModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="optionsModalLabel">Options</h5>
+                    <h5 class="modal-title">Options</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
                   </div>
                   <div class="modal-body">
-                    <!--token-auth training-->
-                    <p id="out-message"></p>
+                    <!-- Change Password Form -->
+                    <p class="out-message"></p>
 
                     <form id="change-password" class="form-inline">
                       <div class="form-group">
@@ -101,145 +212,52 @@
                       <button type="submit" class="btn btn-primary">Change password</button>
                     </form>
                     <br>
+                    <!-- End Change Password Form -->
 
-                    <form id="sign-out" >
+                    <!-- Sign Out Button -->
+                    <form class="sign-out" >
                       <button type="submit" class="btn btn-danger">Sign Out</button>
                     </form>
+                    <!-- End Sign Out Button -->
 
-                    <!--token-auth training-->
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="close-modal btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="close-modal-btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
             </div>
-          <!--Sign Out/PW Modal-->
+          <!--End Sign Out/PW Modal-->
         </div>
-        <!-- Auth Grouping -->
-
-        <div class="btn-group" role="group" aria-label="video-game-group">
-          <!--Create VideoGame Modal-->
-          <button type="button" id="create-button" class="btn btn-success" data-toggle="modal"
-            data-target="#createVideoGameModal">Create Game</button>
-
-            <div class="modal fade" id="createVideoGameModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="createVideoGameModalLabel">Create VideoGame</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--Create VideoGame Data-->
-                    <form class="create-video-game">
-                      <input type='text' name="game[name]" placeholder="Name"><br/>
-                      <input type='text' name="game[developer]" placeholder="Developer"><br/>
-                      <input type='date' name="game[year]" placeholder="Date"><br/>
-                      <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
-                      <input type='text' name="game[system]" placeholder="System"><br/>
-                      Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
-                      <!-- <div name="game[multi]">
-                        <p>Multiplayer</p>
-                        <input type="radio" id="true" value="true">
-                        <label for="true">True</label>
-                        <input type="radio" id="false" value="false">
-                        <label for="false">False</label>
-                      </div> -->
-                      <input type="submit" value="Submit">
-                    </form>
-                    <p id="create-message"></p>
-                    <!--Create VideoGame Data-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Create VideoGame Modal-->
-
-          <!--Show VideoGame Data-->
-          <input id="show-all-video-games" class="btn btn-primary" type="button" value='Show Games'>
-          <!--Show VideoGame Data-->
-
-          <!--Search One VideoGame Modal-->
-          <button type="button" id="search-button" class="btn btn-warning" data-toggle="modal"
-            data-target="#searchVideoGameModal">Search Game</button>
-
-            <div class="modal fade" id="searchVideoGameModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="searchVideoGameModalLabel">Search for a VideoGame</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--Show One VideoGame Data-->
-                    <form class="show-one-video-game">
-                      <fieldset>
-                        <input type ='text' name='game[id]' placeholder="ID">
-                        <input type="submit" value="Search by ID">
-                      </fieldset>
-                    </form>
-                    <!--Show One VideoGame Data-->
-                    <br>
-
-                    <!--Search One VideoGame Data-->
-                    <form class="search-one-video-game">
-                      <fieldset>
-                        <input type ='text' name='game[name]' placeholder="Name">
-                        <input type="submit" value="Search by Name">
-                      </fieldset>
-                    </form>
-                    <!--Search One VideoGame Data-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Search One VideoGame Modal-->
-
-          <!--Update VideoGame Modal-->
-          <button type="button" id="update-button" class="btn btn-danger" data-toggle="modal"
-            data-target="#updateVideoGameModal">Update Game</button>
-
-            <div class="modal fade" id="updateVideoGameModal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="updateVideoGameModalLabel">Update a VideoGame</h5>
-                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
-                  </div>
-                  <div class="modal-body">
-                    <!--Update VideoGame Data-->
-                    <form class="update-video-game">
-                      <fieldset>
-                        <input type="text" name="game[id]" placeholder="ID"><br/>
-                        <input type='text' name="game[name]" placeholder="Name"><br/>
-                        <input type='text' name="game[developer]" placeholder="Developer"><br/>
-                        <input type='date' name="game[year]" placeholder="Date"><br/>
-                        <input type='text' name="game[copy]" placeholder="Physical or Digital"><br/>
-                        <input type='text' name="game[system]" placeholder="System"><br/>
-                        Multiplayer: <input type='text' name="game[multiplayer]" placeholder="True or False"><br/>
-                        <!-- <div name="game[multi]">
-                          <p>Multiplayer</p>
-                          <input type="radio" id="true" value="true">
-                          <label for="true">True</label>
-                          <input type="radio" id="false" value="false">
-                          <label for="false">False</label>
-                        </div> -->
-                        <input type="submit" value="Update">
-                      </fieldset>
-                    </form>
-                    <p id="update-message"></p>
-                    <!--Update VideoGame Data-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!--Update VideoGame Modal-->
-        </div>
+        <!-- End Auth Grouping -->
       </div>
-      <p id="show-message"></p>
+      <!-- End NavBar -->
+
+      <!-- Welcome Message -->
+        <div class="welcome-message">
+          <h2>Welcome to Level Up!</h2>
+          <p>Find yourself losing track of all the videogames you own? You have come to the right place, my friend!</p>
+          <p>If you are new to the site, all you have to do is sign up above*, then sign in to begin logging your collection!</p>
+          <ul>
+            Once in:
+            <li>Click on the green 'Create' button and fill in the fields</li>
+            <li>Once you create, your library begins!</li>
+            <li>You are able to 'Update' and 'Delete' right off each individual game</li>
+            <li>Search for a specific game by ID or Name by clicking thee yellow 'Search' Button</li>
+            <li>Now enjoy your easy to access library to help you manage your VIDEOGAMES!</li>
+          </ul>
+          <p>* Please DO NOT use a real email and/or password. This site is not secured. There is a supplied email and password within each 'Sign In' input if you would like to explore the site. Thank you.</p>
+        </div>
+      <!-- Welcome Message -->
+
+      <!-- View Game Area -->
+      <div class="show-message"></div>
+      <!-- End View Game Area -->
+
+      <!-- Bottom Bar -->
+      <div class="bottom-bar">
+        <p>BroccoliRob Creation</p>
+      </div>
+      <!-- End Bottom Bar -->
     </body>
-    <div class="bottom-bar"></div>
-    <footer>
-    </footer>
 </html>

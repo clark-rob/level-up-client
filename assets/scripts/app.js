@@ -12,17 +12,17 @@ const libraryEvents = require('./library/events.js')
 
 $(() => {
 /* -----------------Auth Events----------------- */
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('.sign-up').on('submit', authEvents.onSignUp)
+  $('.sign-in').on('submit', authEvents.onSignIn)
+  $('.sign-out').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   /* -----------------Auth Events----------------- */
   /* -----------------Library Events----------------- */
   $('.create-video-game').on('submit', libraryEvents.onCreateVideoGame)
-  $('#show-all-video-games').on('click', libraryEvents.onShowAllVideoGames)
+  $('.show-all-btn').on('click', libraryEvents.onShowAllVideoGames)
   $('.show-one-video-game').on('submit', libraryEvents.onShowOneVideoGame)
   $('.search-one-video-game').on('submit', libraryEvents.onSearchOneVideoGame)
-  $('.update-video-game').on('submit', libraryEvents.onUpdateVideoGame)
-  $('#show-message').on('click', 'button', libraryEvents.onDeleteOneVideoGame)
+  $('.show-message').on('submit', libraryEvents.onUpdateVideoGame)
+  $('.show-message').on('click', '.delete-video-game-btn', libraryEvents.onDeleteOneVideoGame)
   /* -----------------Library Events----------------- */
 })

@@ -8,13 +8,13 @@ const onCreateVideoGame = event => { // function onCreateData uses the event sub
   event.preventDefault() // prevent page reload
   const data = getFormFields(event.target) // target form is inserted into Data
   api.createVideoGame(data) // takes data and sends it to api.js
-    .then(ui.createVideoGameSuccess)
+    .then(ui.createVideoGameSuccess) // show success banner first
+    .then(() => onShowAllVideoGames(event)) // then run showAllVideoGames()
     .catch(ui.createVideoGameFailure)
   $(event.target).trigger('reset') // once button clicked, .trigger resets input
 }
 
 const onShowAllVideoGames = event => {
-  event.preventDefault()
   api.showAllVideoGames()
     .then(ui.showAllVideoGamesSuccess)
     .catch(ui.showAllVideoGamesFailure)
@@ -41,17 +41,18 @@ const onSearchOneVideoGame = event => {
 const onUpdateVideoGame = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.updateVideoGame(data)
+  const videoGameId = $(event.target).closest('section').data('id')
+  // clicking on the button passes the id of the selected game
+  api.updateVideoGame(videoGameId, data)
     .then(ui.updateVideoGameSuccess)
+    .then(() => onShowAllVideoGames(event))
     .catch(ui.updateVideoGameFailure)
-  $(event.target).trigger('reset')
 }
 
 const onDeleteOneVideoGame = event => {
   event.preventDefault()
   const videoGameId = $(event.target).closest('section').data('id')
   api.deleteOneVideoGame(videoGameId)
-    .then(() => onShowOneVideoGame(event))
     .then(() => onShowAllVideoGames(event))
     .catch(ui.deleteOneVideoGameFailure)
 }

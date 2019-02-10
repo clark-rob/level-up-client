@@ -1,54 +1,112 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'colors';
 
+// font-family: 'Audiowide', cursive;
+// font-family: 'Monofett', cursive;
+
 body {
   background-color: $rgba-primary-0;
   color: $rgba-primary-2;
+  font-family: 'Audiowide', cursive;
 }
 
-header {
+h1 {
+  font-family: 'Monofett', cursive;
+}
+
+.top-bar {
+  background-color: $rgba-primary-1;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  background-color: $rgba-primary-1;
-  height: 100px;
-  padding-top: 30px;
-  text-align: center;
-  word-wrap: normal;
+  height: 50px;
+  padding-left: 30px;
   width: auto;
+  word-wrap: normal;
+
   h1 {
     color: $rgba-primary-4 * .9;
   }
 }
 
 .bottom-bar {
+  background-color: $rgba-primary-1;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  background-color: $rgba-primary-1;
-  height: 100px;
+  height: 50px;
   padding-top: 30px;
   position: fixed;
+  text-align: right;
   top: 100vh;
   transform: translateY(-100%);
   width: 100%;
+
+  p {
+    color: $rgba-primary-4 * .9;
+    padding-right: 10px;
+  }
 }
 
 .btn-toolbar {
   margin: 0 22px;
-  padding: 10px 0;
+  padding: 10px 0 40px;
+}
+
+.game-actions {
+  // bottom: 0;
+  // margin: 5px 15px;
+  // position: absolute;
+}
+
+.modal {
+  box-shadow: 0 0 100px $rgba-primary-3;
+  color: #000;
+  text-align: left;
+}
+
+.show-message {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  margin-left: 10px;
 }
 
 .shown-game {
+  align-items: flex-end;
   background-color: $rgba-primary-3;
-  margin: 50px auto 80px auto;
-  padding: 20px;
-  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  height: 350px;
+  margin: 1em;
+  padding: 10px;
   width: 300px;
+
+  h1 {
+    align-self: flex-start;
+    color: $rgba-primary-1;
+  }
+
+  p {
+    text-transform: capitalize;
+  }
 }
 
-#create-button,
-#search-button,
-#show-all-video-games,
-#update-button,
-#options-button {
-  visibility: hidden;
+.welcome-message {
+  background-color: $rgba-primary-1;
+  box-shadow: 0 0 100px #007cff;
+  color: $rgba-primary-4 * .9;
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  min-width: 300px;
+  padding: 30px;
+}
+
+.create-btn,
+.search-btn,
+.show-all-btn,
+.options-btn {
+  display: none;
 }

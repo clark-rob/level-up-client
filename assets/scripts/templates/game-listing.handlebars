@@ -7,16 +7,16 @@
       <p>
         ID: {{game.id}}
         <br>
-        {{#if game.developer}}
-          {{game.developer}}
-        {{else}}
-          No developer provided.
-        {{/if}}
-        <br>
         {{#if game.system}}
           {{game.system}}
         {{else}}
           No system provided.
+        {{/if}}
+        <br>
+        {{#if game.developer}}
+          {{game.developer}}
+        {{else}}
+          No developer provided.
         {{/if}}
         <br>
         {{#if game.copy}}
@@ -28,16 +28,77 @@
         {{#if game.multiplayer}}
           Multiplayer: {{game.multiplayer}}
         {{else}}
-          No multiplayer provided.
+          Multiplayer: False
         {{/if}}
         <br>
         {{#if game.year}}
-          Released: {{game.year}}
+          Released: {{slice game.year}}
         {{else}}
           Release date not provided.
         {{/if}}
       </p>
-      <button type="submit" class="btn btn-default">Remove game!</button>
+      <div class="game-actions footer text-right">
+        <!-- Update Button -->
+        <button type="button" class="update-modal-btn btn-warning" data-toggle="modal"
+          data-target="#updateModal{{game.id}}">Update</button>
+          <!-- End Update Button -->
+
+          <!-- Update VideoGame Modal -->
+          <div class="modal fade" id="updateModal{{game.id}}">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Update</h5>
+                  <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Update Form -->
+                  <form class="update-video-game">
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[name]" placeholder="Name" value="{{game.name}}">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[system]" placeholder="System" value="{{game.system}}">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='text' name="game[developer]" placeholder="Developer" value="{{game.developer}}">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type='date' name="game[year]" value="{{game.year}}">
+                      </div>
+                      <div class="form-group">
+                        Copy:
+                        <label>
+                          <input type="radio" value="physical" name="game[copy]" checked>
+                          <span>Physical</span>
+                        </label>
+                        <label>
+                          <input type="radio" value="digital" name="game[copy]">
+                          <span>Digital</span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        Multiplayer:
+                        <label>
+                          <input type="radio" value="true" name="game[multiplayer]" checked>
+                          <span>True</span>
+                        </label>
+                        <label>
+                          <input type="radio" value="false" name="game[multiplayer]">
+                          <span>False</span>
+                        </label>
+                      </div>
+                      <button type="submit" class="update-btn btn-warning">Update!</button>
+                  </form>
+                  <!-- End Update Form -->
+                  <p class="update-message"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- End Update VideoGame Modal -->
+      <button type="submit" class="delete-video-game-btn btn-danger">Remove</button>
+    </div>
     </section>
   </div>
   <br>
