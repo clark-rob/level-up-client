@@ -147,15 +147,21 @@
 
                     <form class="sign-up">
                       <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email"
+                        value="1@test.com"
+                        disabled>
                       </div>
                       <div class="form-group">
                         <input class="form-control" type="password" name="credentials[password]"
-                         placeholder="Password">
+                         placeholder="Password"
+                         value="r"
+                         disabled>
                       </div>
                       <div class="form-group">
                         <input class="form-control" type="password" name="credentials[password_confirmation]"
-                         placeholder="Confirm Password">
+                         placeholder="Confirm Password"
+                         value="r"
+                         disabled>
                       </div>
                       <button type="submit" class="btn btn-primary">Sign Up!</button>
                     </form>
@@ -167,11 +173,13 @@
                     <hr><br>
                     <form class="sign-in form-inline">
                       <div class="form-group">
-                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email" value="r@c.com">
+                        <input class="form-control" type="email" name="credentials[email]" placeholder="Email" value="1@test.com"
+                        disabled>
                       </div>
                       <div class="form-group">
                         <input class="form-control" type="password" name="credentials[password]"
-                       placeholder="Password" value="r">
+                       placeholder="Password" value="r"
+                       disabled>
                      </div>
                       <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
@@ -203,11 +211,13 @@
                     <form id="change-password" class="form-inline">
                       <div class="form-group">
                         <input class="form-control" type="password" name="passwords[old]"
-                         placeholder="OldPassword">
+                         placeholder="OldPassword"
+                         disabled>
                       </div>
                       <div class="form-group">
                         <input class="form-control" type="password" name="passwords[new]"
-                         placeholder="New Password">
+                         placeholder="New Password"
+                         disabled>
                       </div>
                       <button type="submit" class="btn btn-primary">Change password</button>
                     </form>
@@ -246,7 +256,7 @@
             <li>Search for a specific game by ID or Name by clicking thee yellow 'Search' Button</li>
             <li>Now enjoy your easy to access library to help you manage your VIDEOGAMES!</li>
           </ul>
-          <p>* Please DO NOT use a real email and/or password. This site is not secured. There is a supplied email and password within each 'Sign In' input if you would like to explore the site. Thank you.</p>
+          <p>* For demo purposes, I have supplied an email and password within each 'Sign In' input for you to explore the site. Thank you.</p>
         </div>
       <!-- Welcome Message -->
 
