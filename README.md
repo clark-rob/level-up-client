@@ -22,6 +22,13 @@ bookcase or stored in an old shoe box.
 
 No more do you have to wonder what games you own. Level Up is here to help you level up your gaming organization. YEA!
 
+## Preparation
+1. Fork and Clone repository
+2. `git checkout -b <new-branch>` to create and enter a new git branch
+3. Run `npm install` to begin dependencies installation
+4. To test run `grunt serve` to view front end server
+5. To test authorization or CRUD actions, view preparation guide for [level-up-game-library](https://github.com/clark-rob/level-up-game-library) back end server
+
 ## Repo URL's
 - Front-end: https://github.com/clark-rob/level-up-client
 - Back-end: https://github.com/clark-rob/level-up-game-library
@@ -98,9 +105,9 @@ from the crowd.
 ## Resources
   This app was built using the assistance of Google search engine.
   It helped me find sites such as:
-    [https://developer.mozilla.org/en-US/]
-    [https://www.w3schools.com/]
-    [https://stackoverflow.com/]
+    - [Mozilla](https://developer.mozilla.org/en-US/)
+    - [w3schools](https://www.w3schools.com/)
+    - [StackOverflow](https://stackoverflow.com/)
 
   Majority of all my questions, led me to past training notes and
   practices.
